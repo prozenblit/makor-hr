@@ -264,6 +264,9 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .rv-status.approved{background:#f0fdf4;color:#16a34a}
 .rv-status.denied{background:#f5f5f8;color:#a8b6cd}
 .rv-actions{display:flex;align-items:center;gap:8px;justify-content:flex-end}
+.rv-detail-str{max-width:300px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:13px;color:#1a1a1a}
+.rv-dur-str{font-size:13px;font-weight:600;color:#1a1a1a}
+.rv-submitted-str{font-size:13px;color:#7c8dac}
 .rv-table td:last-child{padding-right:32px}
 .rv-table th:last-child{padding-right:32px;text-align:center;width:1px}
 .rv-table th:nth-child(4),.rv-table td:nth-child(4){text-align:center}
@@ -1334,6 +1337,14 @@ body.dark .rv-status.approved{background:rgba(52,211,153,0.15);color:#34d399}
 body.dark .rv-status.denied{background:rgba(255,255,255,0.06);color:#4a5a75}
 body.dark .rv-reviewer{color:#4a5a75}
 body.dark .rv-empty{color:#4a5a75}
+body.dark .rv-detail-str{color:#c8d4e8}
+body.dark .rv-dur-str{color:#e2e8f4}
+body.dark .rv-submitted-str{color:#8a9bc0}
+body.dark .rv-type-icon{background:rgba(255,255,255,0.06)!important;color:#8a9bc0!important}
+body.dark .rv-type-icon[data-reqtype="annual"]{background:rgba(37,99,235,0.18)!important;color:#7aabff!important}
+body.dark .rv-type-icon[data-reqtype="sick"]{background:rgba(220,38,38,0.18)!important;color:#f87171!important}
+body.dark .rv-type-icon[data-reqtype="wfh"]{background:rgba(5,150,105,0.18)!important;color:#34d399!important}
+body.dark .rv-type-icon[data-reqtype="location"]{background:rgba(59,95,192,0.20)!important;color:#7aabff!important}
 /* MODAL BACKDROP */
 body.dark .modal-backdrop{background:rgba(0,0,0,0.60)}
 body.dark .modal-backdrop .modal{background:#1d273c;box-shadow:0 24px 60px rgba(0,0,0,0.60)}
@@ -1635,6 +1646,37 @@ body.dark .stat-value{color:#e2e8f4}
 body.dark .stat-value.teal{color:#0cb8d0}
 /* TOAST */
 body.dark .toast{background:#1d273c;color:#e2e8f4;border:1px solid rgba(255,255,255,0.10)}
+/* TT table muted cells */
+.tt-days-cell{color:#7c8dac}
+.tt-sub-cell{color:#7c8dac}
+.tt-approved-date{font-size:13px;color:#a8b6cd}
+body.dark .tt-days-cell,body.dark .tt-sub-cell{color:#8a9bc0}
+body.dark .tt-approved-date{color:#8a9bc0}
+/* My profile req list */
+.req-sub-cell{color:#7c8dac}
+.req-date-cell{color:#a8b6cd}
+body.dark .req-sub-cell{color:#8a9bc0}
+body.dark .req-date-cell{color:#8a9bc0}
+/* req-type-icon-lg (static HTML modal) */
+body.dark .req-type-icon-lg{background:rgba(255,255,255,0.07)!important}
+body.dark .req-type-icon-lg svg{stroke:currentColor!important}
+body.dark .req-type-btn .req-type-icon-lg{color:#8a9bc0}
+/* req-icon-sm dark overrides (My Profile) */
+body.dark .req-icon-sm{background:rgba(255,255,255,0.07)!important;color:#8a9bc0!important}
+body.dark .req-icon-sm[data-reqtype="timeoff"]{background:rgba(37,99,235,0.16)!important;color:#7aabff!important}
+body.dark .req-icon-sm[data-reqtype="sick"]{background:rgba(220,38,38,0.16)!important;color:#f87171!important}
+body.dark .req-icon-sm[data-reqtype="location"]{background:rgba(124,58,237,0.16)!important;color:#c4b5fd!important}
+/* Inline-style grey colour overrides — catches all hardcoded light-mode text colours */
+body.dark [style*="color:#7c8dac"]{color:#8a9bc0!important}
+body.dark [style*="color:#a8b6cd"]{color:#8a9bc0!important}
+body.dark [style*="color:#b0b8c8"]{color:#8a9bc0!important}
+body.dark [style*="color:#c4cdd9"]{color:#4a5a75!important}
+body.dark [style*="color:#c4cdd8"]{color:#4a5a75!important}
+/* Inline pastel background overrides */
+body.dark [style*="background:#fef3ec"]{background:rgba(251,146,60,0.14)!important}
+body.dark [style*="background:#eef2ff"]{background:rgba(99,102,241,0.14)!important}
+body.dark [style*="background:#dbeafe"]{background:rgba(37,99,235,0.15)!important}
+body.dark .wfh-stat-icon svg{stroke:#7aabff!important}
 </style>
 </head>
 <body>
@@ -3768,10 +3810,10 @@ function renderHRRequests(){
   const statusLabel=r.status==='new'?'● New':r.status.charAt(0).toUpperCase()+r.status.slice(1);
   return `<tr class="${rowCls}">
    <td><div class="rv-emp"><div class="rv-avatar">${r.initials}</div><span class="rv-emp-name">${r.emp}</span></div></td>
-   <td><div class="rv-type"><div class="rv-type-icon" style="background:${tm.bg};color:${tm.color}">${tm.icon}</div><span class="rv-type-label">${tm.label}</span></div></td>
-   <td><div style="max-width:300px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:13px;color:#1a1a1a">${detailStr}</div></td>
-   <td style="font-size:13px;font-weight:600;color:#1a1a1a">${durStr}</td>
-   <td style="font-size:13px;color:#7c8dac">${r.submitted}</td>
+   <td><div class="rv-type"><div class="rv-type-icon" data-reqtype="${r.type}" style="background:${tm.bg};color:${tm.color}">${tm.icon}</div><span class="rv-type-label">${tm.label}</span></div></td>
+   <td><div class="rv-detail-str">${detailStr}</div></td>
+   <td class="rv-dur-str">${durStr}</td>
+   <td class="rv-submitted-str">${r.submitted}</td>
    <td><span class="rv-status ${r.status}">${statusLabel}</span></td>
    <td><div class="rv-actions">${actionable?`<button class="rv-btn-approve" onclick="approveHRReq(${r.id})">Approve</button><button class="rv-btn-deny" onclick="denyHRReq(${r.id})">Deny</button>`:''}</div></td>
   </tr>`;
@@ -3901,8 +3943,8 @@ function renderTTRow(ts){
   <td><div class="tt-emp-cell"><div class="tt-avatar">${ts.initials}</div><div><div class="tt-emp-name">${ts.emp}</div><div class="tt-emp-dept">${ts.dept}</div></div></div></td>
   <td style="font-weight:600">${ts.periodLabel}</td>
   <td style="text-align:right;font-weight:700">${totalHrs}</td>
-  <td style="text-align:right;color:#7c8dac">${days}</td>
-  <td style="color:#7c8dac">${submitted}</td>
+  <td class="tt-days-cell" style="text-align:right">${days}</td>
+  <td class="tt-sub-cell">${submitted}</td>
   <td>${badge}</td>
  </tr>`;
 }
@@ -3946,7 +3988,7 @@ function selectTimesheet(id){
   const hasMissing=Object.values(ts.hours).some(e=>e.type==='missing');
   footer.innerHTML=`${hasMissing?`<button class="tt-btn-fill-all" onclick="openFillAllModal(${ts.id})">Fill All Workdays</button>`:'<span></span>'}<button class="tt-btn-approve" onclick="approveTimesheet(${ts.id})">Approve</button>`;
  } else {
-  footer.innerHTML=`<div class="tt-approved-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Approved</div><span style="font-size:13px;color:#a8b6cd">${ts.approvedAt||''}</span>`;
+  footer.innerHTML=`<div class="tt-approved-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Approved</div><span class="tt-approved-date">${ts.approvedAt||''}</span>`;
  }
 }
 
@@ -4802,9 +4844,9 @@ function renderRequests(f){
   </tr></thead>
   <tbody>${list.map(r=>`
   <tr>
-   <td><div style="display:flex;align-items:center;gap:10px"><div class="req-icon-sm" style="background:${REQ_BG[r.type]||'#f5f5f8'}">${REQ_ICONS[r.type]||REQ_ICONS.timeoff}</div><span style="font-weight:400;white-space:nowrap">${r.title}</span></div></td>
-   <td style="color:#7c8dac;white-space:nowrap">${r.sub}</td>
-   <td style="text-align:right;color:#a8b6cd;white-space:nowrap">${r.date}</td>
+   <td><div style="display:flex;align-items:center;gap:10px"><div class="req-icon-sm" data-reqtype="${r.type}" style="background:${REQ_BG[r.type]||'#f5f5f8'}">${REQ_ICONS[r.type]||REQ_ICONS.timeoff}</div><span style="font-weight:400;white-space:nowrap">${r.title}</span></div></td>
+   <td class="req-sub-cell">${r.sub}</td>
+   <td class="req-date-cell" style="text-align:right">${r.date}</td>
    <td style="text-align:right"><span class="req-status ${r.status}">${r.status.charAt(0).toUpperCase()+r.status.slice(1)}</span></td>
   </tr>`).join('')}
   </tbody></table></div>`;
