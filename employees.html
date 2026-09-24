@@ -4490,7 +4490,14 @@ window.addEventListener('DOMContentLoaded',function(){
  if(h==='#timetracking') showTimeTrackingView();
  else if(h==='#requests') showRequestsView();
  else if(h==='#pool') showPoolView();
- else if(h==='#myinfo') showMyInfoView();
+ else if(h.startsWith('#myinfo')){
+  showMyInfoView();
+  const sub=h.split(':')[1];
+  if(sub&&sub!=='myinfo'){
+   const tabEl=document.querySelector(`#myprofile-view .profile-tab[data-tab="${sub}"]`);
+   if(tabEl)tabEl.click();
+  }
+ }
  else if(h==='#people') showPeopleView();
  else showEmployeeView();
 });
@@ -5360,6 +5367,7 @@ function wsInit(){
    tab.classList.add('active');
    document.getElementById('panel-'+tab.dataset.tab).classList.add('active');
    document.getElementById('myprofile-view').scrollTo(0,0);
+   history.replaceState(null,'','#myinfo:'+tab.dataset.tab);
   });
  });
  setTimeout(dpRender,100);
