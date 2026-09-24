@@ -1694,7 +1694,7 @@ body.dark .wfh-stat-icon svg{stroke:#7aabff!important}
       </div>
     </div>
     <div class="nav-links" id="hr-nav-links">
-      <a class="nav-link active" id="nav-employee" href="employees.html" onclick="if(document.getElementById('requests-view').style.display!=='none'||document.getElementById('timetracking-view').style.display!=='none'){showEmployeeView();return false}">Employee</a>
+      <a class="nav-link active" id="nav-employee" href="#" onclick="showEmployeeView();return false">Employee</a>
       <a class="nav-link" id="nav-pool" href="#" onclick="showPoolView();return false">Pool</a>
       <a class="nav-link" id="nav-timetracking" href="#" onclick="showTimeTrackingView();return false">Time Tracking</a>
       <a class="nav-link" id="nav-requests" href="#" onclick="showRequestsView();return false">Requests</a>
@@ -3739,6 +3739,7 @@ const REQ_TYPE_META={
 let _hrFilter='all',_hrSearch='';
 function showRequestsView(){
  setNavApp('hr');
+ history.replaceState(null,'','#requests');
  document.getElementById('myprofile-view').style.display='none';
  document.getElementById('emp-view').style.display='none';
  document.getElementById('timetracking-view').style.display='none';
@@ -3750,6 +3751,7 @@ function showRequestsView(){
 }
 function showEmployeeView(){
  setNavApp('hr');
+ history.replaceState(null,'','#employee');
  document.getElementById('myprofile-view').style.display='none';
  document.getElementById('requests-view').style.display='none';
  document.getElementById('timetracking-view').style.display='none';
@@ -3760,6 +3762,7 @@ function showEmployeeView(){
 }
 function showPoolView(){
  setNavApp('hr');
+ history.replaceState(null,'','#pool');
  document.getElementById('myprofile-view').style.display='none';
  document.getElementById('emp-view').style.display='none';
  document.getElementById('requests-view').style.display='none';
@@ -3898,6 +3901,7 @@ let _ttSearch='',_ttSelected=null;
 
 function showTimeTrackingView(){
  setNavApp('hr');
+ history.replaceState(null,'','#timetracking');
  document.getElementById('myprofile-view').style.display='none';
  document.getElementById('emp-view').style.display='none';
  document.getElementById('requests-view').style.display='none';
@@ -4488,6 +4492,7 @@ window.addEventListener('DOMContentLoaded',function(){
  else if(h==='#pool') showPoolView();
  else if(h==='#myinfo') showMyInfoView();
  else if(h==='#people') showPeopleView();
+ else showEmployeeView();
 });
 
 /* ══ MY PROFILE / WORKSPACE (merged from workspace.html) ══ */
@@ -5385,6 +5390,7 @@ function switchToHR(){
 function showMyInfoView(){
  wsInit();
  setNavApp('myprofile');
+ history.replaceState(null,'','#myinfo');
  document.getElementById('myprofile-view').style.display='block';
  ['emp-view','pool-view','requests-view','timetracking-view'].forEach(id=>{document.getElementById(id).style.display='none';});
  document.querySelectorAll('#myprofile-nav-links .nav-link').forEach(l=>l.classList.remove('active'));
@@ -5395,6 +5401,7 @@ function showMyInfoView(){
 function showPeopleView(){
  wsInit();
  setNavApp('myprofile');
+ history.replaceState(null,'','#people');
  document.getElementById('myprofile-view').style.display='block';
  ['emp-view','pool-view','requests-view','timetracking-view'].forEach(id=>{document.getElementById(id).style.display='none';});
  document.querySelectorAll('#myprofile-nav-links .nav-link').forEach(l=>l.classList.remove('active'));
