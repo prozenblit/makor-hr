@@ -1082,6 +1082,7 @@ body.dark .btn-primary{background:#0cb8d0}
 body.dark .btn-primary:disabled,body.dark .btn-primary[disabled]{background:#1d273c;color:rgba(255,255,255,0.22);opacity:1!important;cursor:not-allowed}
 body.dark .btn-outline{background:#1d273c;border-color:rgba(255,255,255,0.12);color:#c8d4e8}
 body.dark .btn-outline:hover{border-color:#0cb8d0;color:#0cb8d0}
+body.dark .btn-outline:disabled,body.dark .btn-outline[disabled]{background:#1d273c;border-color:rgba(255,255,255,0.06);color:rgba(255,255,255,0.18);opacity:1!important;cursor:not-allowed}
 body.dark .btn-cancel{background:transparent;border-color:rgba(255,255,255,0.10);color:#8a9bc0}
 body.dark .btn-cancel:hover{background:rgba(255,255,255,0.04)}
 body.dark .btn-cta{background:#0cb8d0}
@@ -2614,7 +2615,7 @@ body.dark .wfh-stat-icon svg{stroke:#7aabff!important}
     <div class="wfh-cal-body" id="wfhCal"></div>
    </div>
    <div class="wfh-save-row">
-    <button class="btn-outline" onclick="resetWFH()">Reset</button>
+    <button class="btn-outline" id="resetWFHBtn" onclick="resetWFH()" disabled style="opacity:0.45;cursor:not-allowed">Reset</button>
     <button class="btn-primary" id="saveWFHBtn" onclick="saveWFH()" disabled style="opacity:0.45;cursor:not-allowed">Save Schedule</button>
    </div>
   </div>
@@ -4539,7 +4540,7 @@ let REQUESTS=[
  {id:11,type:'timeoff', title:'Annual Leave',            sub:'Dec 25–26, 2025 · Christmas',            status:'approved',date:'Dec 10, 2025'},
  {id:12,type:'sick',    title:'Sick Leave',              sub:'Nov 18, 2025 · Personal illness',        status:'approved',date:'Nov 18, 2025'},
 ];
-const WFH_DATA={
+let WFH_DATA={
  '2026-09-01':'office','2026-09-02':'office','2026-09-03':'wfh',
  '2026-09-04':'office','2026-09-07':'wfh','2026-09-08':'office',
  '2026-09-09':'office','2026-09-10':'wfh','2026-09-11':'office',
@@ -4788,17 +4789,25 @@ function renderWFH(){
  for(let i=1;i<=remaining;i++)cells+=`<div class="wfh-cell faded"><div class="wfh-cell-num">${i}</div></div>`;
  document.getElementById('wfhCal').innerHTML=cells;
 }
-let WFH_DATA_SAVED={};
+let WFH_DATA_SAVED=Object.assign({},WFH_DATA);
+let WFH_DATA_SESSION_INIT=Object.assign({},WFH_DATA);
 function checkWFHChanged(){
-  const btn=document.getElementById('saveWFHBtn');
-  if(!btn)return;
-  const changed=JSON.stringify(WFH_DATA)!==JSON.stringify(WFH_DATA_SAVED);
-  btn.disabled=!changed;
-  btn.style.opacity=changed?'':'0.45';
-  btn.style.cursor=changed?'':'not-allowed';
+  const saveBtn=document.getElementById('saveWFHBtn');
+  const resetBtn=document.getElementById('resetWFHBtn');
+  if(!saveBtn)return;
+  const changedVsSaved=JSON.stringify(WFH_DATA)!==JSON.stringify(WFH_DATA_SAVED);
+  const changedVsInit=JSON.stringify(WFH_DATA)!==JSON.stringify(WFH_DATA_SESSION_INIT);
+  saveBtn.disabled=!changedVsSaved;
+  saveBtn.style.opacity=changedVsSaved?'':'0.45';
+  saveBtn.style.cursor=changedVsSaved?'':'not-allowed';
+  if(resetBtn){
+    resetBtn.disabled=!changedVsInit;
+    resetBtn.style.opacity=changedVsInit?'':'0.45';
+    resetBtn.style.cursor=changedVsInit?'':'not-allowed';
+  }
 }
 function resetWFH(){
-  WFH_DATA=Object.assign({},WFH_DATA_SAVED);
+  WFH_DATA=Object.assign({},WFH_DATA_SESSION_INIT);
   renderWFH();calcStats();checkWFHChanged();
 }
 function saveWFH(){
