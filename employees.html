@@ -410,6 +410,7 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .modal-input::placeholder{color:#a8b6cd}
 .modal-input:focus,.modal-select:focus{border-color:#005268;box-shadow:0 0 0 3px rgba(0,82,104,0.12)}
 .modal-input::-webkit-calendar-picker-indicator{display:none}
+.modal-field .cust-select{display:block;width:100%}.modal-field .cust-select__trigger{width:100%;box-sizing:border-box}.modal-field .cust-select__panel{min-width:100%;box-sizing:border-box}
 .modal-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23005268' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;cursor:pointer}
 .modal-divider{height:1px;background:#e5e7ec;margin:4px 0 24px}
 
@@ -3353,13 +3354,16 @@ body.dark .wfh-stat-icon-office svg{stroke:#60a5fa!important}
      </div>
      <div class="modal-field">
       <label class="modal-label">Gender</label>
-      <select class="modal-select" id="ne-gender">
-       <option value="">Select…</option>
-       <option>Male</option>
-       <option>Female</option>
-       <option>Non-binary</option>
-       <option>Prefer not to say</option>
-      </select>
+      <div class="cust-select" id="ne-gender">
+       <div class="cust-select__trigger" onclick="csToggle('ne-gender')"><span class="cust-select__value">Select…</span><svg class="cust-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9 9 9-9"/></svg></div>
+       <div class="cust-select__panel">
+        <div class="cust-select__option selected" onclick="csPick('ne-gender','','Select…',null)">Select…</div>
+        <div class="cust-select__option" onclick="csPick('ne-gender','Male','Male',null)">Male</div>
+        <div class="cust-select__option" onclick="csPick('ne-gender','Female','Female',null)">Female</div>
+        <div class="cust-select__option" onclick="csPick('ne-gender','Non-binary','Non-binary',null)">Non-binary</div>
+        <div class="cust-select__option" onclick="csPick('ne-gender','Prefer not to say','Prefer not to say',null)">Prefer not to say</div>
+       </div>
+      </div>
      </div>
      <div class="modal-field">
       <label class="modal-label">Date of Birth</label>
@@ -3399,24 +3403,30 @@ body.dark .wfh-stat-icon-office svg{stroke:#60a5fa!important}
      </div>
      <div class="modal-field">
       <label class="modal-label">Department</label>
-      <select class="modal-select" id="ne-dept">
-       <option value="">Select…</option>
-       <option>Equities</option>
-       <option>Fixed Income</option>
-       <option>Technology</option>
-       <option>Operations</option>
-       <option>Compliance</option>
-       <option>Finance</option>
-      </select>
+      <div class="cust-select" id="ne-dept">
+       <div class="cust-select__trigger" onclick="csToggle('ne-dept')"><span class="cust-select__value">Select…</span><svg class="cust-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9 9 9-9"/></svg></div>
+       <div class="cust-select__panel">
+        <div class="cust-select__option selected" onclick="csPick('ne-dept','','Select…',null)">Select…</div>
+        <div class="cust-select__option" onclick="csPick('ne-dept','Equities','Equities',null)">Equities</div>
+        <div class="cust-select__option" onclick="csPick('ne-dept','Fixed Income','Fixed Income',null)">Fixed Income</div>
+        <div class="cust-select__option" onclick="csPick('ne-dept','Technology','Technology',null)">Technology</div>
+        <div class="cust-select__option" onclick="csPick('ne-dept','Operations','Operations',null)">Operations</div>
+        <div class="cust-select__option" onclick="csPick('ne-dept','Compliance','Compliance',null)">Compliance</div>
+        <div class="cust-select__option" onclick="csPick('ne-dept','Finance','Finance',null)">Finance</div>
+       </div>
+      </div>
      </div>
      <div class="modal-field">
       <label class="modal-label">Office</label>
-      <select class="modal-select" id="ne-office">
-       <option value="">Select…</option>
-       <option>New York</option>
-       <option>London</option>
-       <option>Tel Aviv</option>
-      </select>
+      <div class="cust-select" id="ne-office">
+       <div class="cust-select__trigger" onclick="csToggle('ne-office')"><span class="cust-select__value">Select…</span><svg class="cust-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9 9 9-9"/></svg></div>
+       <div class="cust-select__panel">
+        <div class="cust-select__option selected" onclick="csPick('ne-office','','Select…',null)">Select…</div>
+        <div class="cust-select__option" onclick="csPick('ne-office','New York','New York',null)">New York</div>
+        <div class="cust-select__option" onclick="csPick('ne-office','London','London',null)">London</div>
+        <div class="cust-select__option" onclick="csPick('ne-office','Tel Aviv','Tel Aviv',null)">Tel Aviv</div>
+       </div>
+      </div>
      </div>
      <div class="modal-field">
       <label class="modal-label">Hire Date</label>
@@ -3424,10 +3434,13 @@ body.dark .wfh-stat-icon-office svg{stroke:#60a5fa!important}
      </div>
      <div class="modal-field">
       <label class="modal-label">Status</label>
-      <select class="modal-select" id="ne-status">
-       <option value="active">Active</option>
-       <option value="inactive">Inactive</option>
-      </select>
+      <div class="cust-select" id="ne-status" data-val="active">
+       <div class="cust-select__trigger has-value" onclick="csToggle('ne-status')"><span class="cust-select__value">Active</span><svg class="cust-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9 9 9-9"/></svg></div>
+       <div class="cust-select__panel">
+        <div class="cust-select__option selected" onclick="csPick('ne-status','active','Active',null)">Active</div>
+        <div class="cust-select__option" onclick="csPick('ne-status','inactive','Inactive',null)">Inactive</div>
+       </div>
+      </div>
      </div>
     </div>
    </div>
@@ -3443,7 +3456,10 @@ body.dark .wfh-stat-icon-office svg{stroke:#60a5fa!important}
      </div>
      <div class="modal-field">
       <label class="modal-label">Reports To</label>
-      <select class="modal-select" id="ne-rt"><option value="">Select…</option></select>
+      <div class="cust-select" id="ne-rt">
+       <div class="cust-select__trigger" onclick="csToggle('ne-rt')"><span class="cust-select__value">Select…</span><svg class="cust-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9 9 9-9"/></svg></div>
+       <div class="cust-select__panel"></div>
+      </div>
      </div>
     </div>
    </div>
@@ -3602,10 +3618,12 @@ function filterOffice(v){oF=v;renderTable(filtered());}
 function filterStatus(v){sF=v;renderTable(filtered());}
 
 /* ── DROPDOWNS ───────────────────────────────────────────────────── */
-function csToggle(id){const el=document.getElementById(id),op=el.classList.contains('open');document.querySelectorAll('.cust-select.open').forEach(s=>s.classList.remove('open'));if(!op)el.classList.add('open');}
-function csPick(id,val,lbl,cb){const el=document.getElementById(id);el.querySelector('.cust-select__value').textContent=lbl;el.querySelectorAll('.cust-select__option').forEach(o=>o.classList.remove('selected'));event.currentTarget.classList.add('selected');el.classList.remove('open');const t=el.querySelector('.cust-select__trigger');val?t.classList.add('has-value'):t.classList.remove('has-value');if(cb)cb(val);}
-document.addEventListener('click',e=>{if(!e.target.closest('.cust-select'))document.querySelectorAll('.cust-select.open').forEach(s=>s.classList.remove('open'));});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.cust-select.open').forEach(s=>s.classList.remove('open'));});
+function _csCloseAll(){document.querySelectorAll('.cust-select.open').forEach(s=>{s.classList.remove('open');const mb=s.closest('.modal-body');if(mb)mb.style.overflowY='';})}
+function csToggle(id){const el=document.getElementById(id),op=el.classList.contains('open');_csCloseAll();if(!op){el.classList.add('open');const mb=el.closest('.modal-body');if(mb)mb.style.overflowY='visible';}}
+function csPick(id,val,lbl,cb){const el=document.getElementById(id);el.dataset.val=val;el.querySelector('.cust-select__value').textContent=lbl;el.querySelectorAll('.cust-select__option').forEach(o=>o.classList.remove('selected'));event.currentTarget.classList.add('selected');el.classList.remove('open');const mb=el.closest('.modal-body');if(mb)mb.style.overflowY='';const t=el.querySelector('.cust-select__trigger');val?t.classList.add('has-value'):t.classList.remove('has-value');if(cb)cb(val);}
+function csGetVal(id){return document.getElementById(id)?.dataset?.val||'';}
+document.addEventListener('click',e=>{if(!e.target.closest('.cust-select'))_csCloseAll();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')_csCloseAll();});
 
 /* ── TABS ────────────────────────────────────────────────────────── */
 function switchTab(id,btn){
@@ -3692,9 +3710,13 @@ renderTable(EMP);
 /* ── NEW EMPLOYEE MODAL ───────────────────────────────────────────── */
 function openEmpModal(){
  // Populate Reports To from EMP
- const sel=document.getElementById('ne-rt');
- sel.innerHTML='<option value="">Select…</option>';
- EMP.forEach(e=>{const o=document.createElement('option');o.value=e.name;o.textContent=e.name;sel.appendChild(o);});
+ const rtEl=document.getElementById('ne-rt');
+ const rtPanel=rtEl.querySelector('.cust-select__panel');
+ rtPanel.innerHTML='<div class="cust-select__option selected" onclick="csPick(\'ne-rt\',\'\',\'Select…\',null)">Select…</div>';
+ EMP.forEach(e=>{const d=document.createElement('div');d.className='cust-select__option';d.textContent=e.name;d.onclick=function(){csPick('ne-rt',e.name,e.name,null);};rtPanel.appendChild(d);});
+ rtEl.dataset.val='';
+ rtEl.querySelector('.cust-select__value').textContent='Select…';
+ rtEl.querySelector('.cust-select__trigger').classList.remove('has-value');
  document.getElementById('empModal').classList.add('open');
  document.body.style.overflow='hidden';
  document.getElementById('ne-first').focus();
@@ -3711,8 +3733,8 @@ function submitEmpModal(){
  if(!email){alert('Please enter a work email.');return;}
  const name=`${first} ${last}`;
  const initials=(first[0]+(last[0]||'')).toUpperCase();
- const dept=document.getElementById('ne-dept').value||'Operations';
- const office=document.getElementById('ne-office').value||'New York';
+ const dept=csGetVal('ne-dept')||'Operations';
+ const office=csGetVal('ne-office')||'New York';
  const hire=document.getElementById('ne-hire').value
    ? new Date(document.getElementById('ne-hire').value).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})
    : new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
@@ -3720,9 +3742,9 @@ function submitEmpModal(){
   name,initials,
   role:document.getElementById('ne-role').value.trim()||'—',
   dept,office,hire,
-  status:document.getElementById('ne-status').value,
+  status:csGetVal('ne-status')||'active',
   birthday:document.getElementById('ne-dob').value?new Date(document.getElementById('ne-dob').value).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'',
-  reportsTo:document.getElementById('ne-rt').value,
+  reportsTo:csGetVal('ne-rt'),
   _email:email,_mobile:document.getElementById('ne-mobile').value.trim(),_co:document.getElementById('ne-co').value.trim()
  };
  EMP.unshift(newEmp);
@@ -3730,7 +3752,8 @@ function submitEmpModal(){
  closeEmpModal();
  // Clear form
  ['ne-first','ne-last','ne-dob','ne-email','ne-mobile','ne-phone','ne-role','ne-co'].forEach(id=>document.getElementById(id).value='');
- ['ne-gender','ne-dept','ne-office','ne-status','ne-rt'].forEach(id=>{const el=document.getElementById(id);if(el)el.selectedIndex=0;});
+ ['ne-gender','ne-dept','ne-office','ne-rt'].forEach(id=>{const el=document.getElementById(id);if(!el)return;el.dataset.val='';el.querySelector('.cust-select__value').textContent='Select…';el.querySelector('.cust-select__trigger').classList.remove('has-value');el.querySelectorAll('.cust-select__option').forEach((o,i)=>o.classList.toggle('selected',i===0));});
+ const nsEl=document.getElementById('ne-status');if(nsEl){nsEl.dataset.val='active';nsEl.querySelector('.cust-select__value').textContent='Active';nsEl.querySelector('.cust-select__trigger').classList.add('has-value');nsEl.querySelectorAll('.cust-select__option').forEach((o,i)=>o.classList.toggle('selected',i===0));}
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('empModal').classList.contains('open'))closeEmpModal();if(e.key==='Escape'){document.getElementById('appDrop').classList.remove('open');if(typeof closeReqModal!=='undefined')closeReqModal();if(typeof closeModal!=='undefined')closeModal();if(typeof closeCalcModal!=='undefined')closeCalcModal();if(typeof closeEmpCard!=='undefined')closeEmpCard();const fm=document.getElementById('fillModal');if(fm)fm.classList.remove('open');}});
 function toggleAppDrop(){document.getElementById('appDrop').classList.toggle('open');}
