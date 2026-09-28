@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -27,7 +27,7 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .nav-right{display:flex;align-items:center;gap:10px}
 .nav-avatar{width:42px;height:42px;border-radius:50%;border:1px solid #e5e7ec;background:#f5f5f8;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:500;color:#1a1a1a;cursor:pointer;flex-shrink:0}
 /* ── APP DROPDOWN ─────────────────── */
-.app-drop{position:fixed;top:82px;left:40px;width:226px;background:#fff;border:1px solid #e5e7ec;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);z-index:9000;padding:6px 0;display:none}
+.app-drop{position:fixed;top:82px;left:40px;width:226px;background:#fff;border:1px solid #e5e7ec;border-radius:4px;box-shadow:0 8px 32px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);z-index:9000;padding:6px 0;display:none}
 .app-drop.open{display:block}
 .app-drop-section{padding:8px 14px 4px;font-size:10px;font-weight:700;color:#a8b6cd;text-transform:uppercase;letter-spacing:0.10em}
 .app-drop-item{display:flex;align-items:center;gap:10px;padding:9px 14px;cursor:pointer;transition:background 0.10s;text-decoration:none}
@@ -41,12 +41,12 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 
 /* ── LAYOUT ──────────────────────────── */
 .page{padding-top:74px;height:100vh;display:flex;align-items:stretch;overflow:hidden;box-sizing:border-box;padding-left:210px;padding-right:210px}
-.page-center{display:flex;flex:1;margin:12px 0;border-radius:14px;border:1px solid #e5e7ec;box-shadow:0 2px 8px rgba(0,0,0,0.06);overflow:hidden}
+.page-center{display:flex;flex:1;margin:12px 0;border-radius:4px;border:1px solid #e5e7ec;box-shadow:0 2px 8px rgba(0,0,0,0.06);overflow:hidden}
 .split-left{width:54%;flex-shrink:0;background:#fff;border-right:1px solid #e5e7ec;display:flex;flex-direction:column;overflow:hidden}
 .split-right{flex:1;background:#fff;display:flex;flex-direction:column;overflow:hidden}
 .tab-body{flex:1;min-height:0;overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,0.10) transparent}
 .tab-body::-webkit-scrollbar{width:6px}
-.tab-body::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.10);border-radius:3px}
+.tab-body::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.10);border-radius:2px}
 
 /* ── LEFT HEADER ─────────────────────── */
 .left-header{padding:20px 20px 12px;border-bottom:1px solid #e5e7ec;flex-shrink:0}
@@ -60,7 +60,7 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 /* unified cancel + primary for dialogs */
 .btn-cancel{height:38px;padding:0 20px;border-radius:4px;border:1px solid #c4cdd8;background:transparent;font-family:inherit;font-size:14px;font-weight:600;color:#7c8dac;cursor:pointer;transition:background 0.12s}
 .btn-cancel:hover{background:#f5f5f8}
-.btn-cta{height:38px;padding:0 24px;border-radius:4px;border:none;background:#005268;font-family:inherit;font-size:14px;font-weight:600;color:#fff;cursor:pointer;transition:opacity 0.12s;white-space:nowrap}
+.btn-cta{height:38px;padding:0 24px;border-radius:4px;border:none;background:#005268;font-family:inherit;font-size:14px;font-weight:500;color:#fff;cursor:pointer;transition:opacity 0.12s;white-space:nowrap}
 .btn-cta:hover{opacity:0.85}
 .emp-list-scroll{flex:1;overflow:hidden;padding:16px;display:flex;flex-direction:column;min-height:0}
 
@@ -78,7 +78,7 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .cust-select.open .cust-select__trigger{border-color:#005268}
 .cust-select__chevron{flex-shrink:0;color:#005268;transition:transform 0.15s}
 .cust-select.open .cust-select__chevron{transform:rotate(180deg)}
-.cust-select__panel{display:none;position:absolute;top:calc(100% + 6px);left:0;min-width:100%;background:#fff;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);z-index:500;overflow:hidden;padding:6px 0}
+.cust-select__panel{display:none;position:absolute;top:calc(100% + 6px);left:0;min-width:100%;background:#fff;border-radius:4px;box-shadow:0 8px 32px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);z-index:500;overflow:hidden;padding:6px 0}
 .cust-select.open .cust-select__panel{display:block}
 .cust-select__option{padding:10px 16px;font-size:14px;cursor:pointer;color:#1a1a1a;white-space:nowrap}
 .cust-select__option:hover{background:#f5f5f8}
@@ -94,12 +94,12 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 /* ── TABLE ───────────────────────────── */
 .group-header-row td{background:#f5f5f8!important;font-size:12px;font-weight:700;color:#7c8dac;text-transform:uppercase;letter-spacing:0.06em;padding:10px 16px 8px!important;border-bottom:1px solid #e5e7ec!important}
 .group-header-row:hover td{background:#f5f5f8!important;cursor:default}
-.emp-table-wrap{flex:1;min-height:0;background:#fff;border:1px solid #e5e7ec;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.05);display:flex;flex-direction:column}
+.emp-table-wrap{flex:1;min-height:0;background:#fff;border:1px solid #e5e7ec;border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.05);display:flex;flex-direction:column}
 .emp-table{width:100%;border-collapse:collapse;table-layout:fixed;display:flex;flex-direction:column;flex:1;min-height:0}
 .emp-table thead{display:table;width:100%;table-layout:fixed;flex-shrink:0}
 .emp-table tbody{display:block;flex:1;min-height:0;overflow-y:scroll;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,0.12) transparent;scrollbar-gutter:stable}
 .emp-table tbody::-webkit-scrollbar{width:6px}
-.emp-table tbody::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.12);border-radius:3px}
+.emp-table tbody::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.12);border-radius:2px}
 .emp-table tbody tr{display:table;width:100%;table-layout:fixed}
 .emp-table th{text-align:left;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#a8b6cd;padding:12px 16px;border-bottom:1px solid #e5e7ec;background:#f5f5f8;white-space:nowrap;cursor:pointer;user-select:none}
 .emp-table th:hover{color:#005268}
@@ -120,7 +120,7 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .emp-name.inactive{color:#a8b6cd}
 .emp-email{font-size:12px;color:#7c8dac;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dept-badge{display:inline-block;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:500;white-space:nowrap}
-.status-pill{display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;padding:3px 10px;border-radius:16px}
+.status-pill{display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;padding:3px 10px;border-radius:4px}
 .status-active{background:#c1f0d5;color:#179484}
 .status-inactive{background:#fde8e6;color:#da4d43}
 
@@ -230,15 +230,15 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .timesheet-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:200px;gap:10px;color:#a8b6cd;font-size:14px;padding:40px;border-top:1px solid #e5e7ec}
 
 /* ── REQUESTS VIEW ──────────────────── */
-#requests-view{flex:1;display:flex;flex-direction:column;min-height:0;overflow:hidden;margin:12px 0;border-radius:14px;border:1px solid #e5e7ec;box-shadow:0 2px 8px rgba(0,0,0,0.06);background:#fff}
+#requests-view{flex:1;display:flex;flex-direction:column;min-height:0;overflow:hidden;margin:12px 0;border-radius:4px;border:1px solid #e5e7ec;box-shadow:0 2px 8px rgba(0,0,0,0.06);background:#fff}
 .rv-header{padding:20px 20px 0;border-bottom:1px solid #e5e7ec;flex-shrink:0}
 .rv-title-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;min-height:36px}
 .rv-title{font-size:16px;font-weight:800;color:#1a1a1a}
 .rv-toolbar{padding:0 0 12px;display:flex;align-items:center;gap:12px;flex-shrink:0}
 .rv-list{flex:1;overflow-y:auto;overflow-x:hidden;padding:16px;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,0.08) transparent}
 .rv-list::-webkit-scrollbar{width:6px}
-.rv-list::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.08);border-radius:3px}
-#hrReqList{border:1px solid #e5e7ec;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.05);background:#fff}
+.rv-list::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.08);border-radius:2px}
+#hrReqList{border:1px solid #e5e7ec;border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.05);background:#fff}
 .rv-table{width:100%;border-collapse:collapse}
 .rv-table th{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#a8b6cd;padding:12px 16px;border-bottom:1px solid #e5e7ec;background:#f5f5f8;text-align:left;white-space:nowrap;position:sticky;top:0;z-index:1}
 .rv-table td{padding:12px 16px;border-bottom:1px solid #e5e7ec;vertical-align:middle;overflow:hidden;white-space:nowrap}
@@ -250,7 +250,7 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .rv-avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:500;flex-shrink:0;background:#fff;border:1px solid #000;color:#000}
 .rv-emp-name{font-size:14px;font-weight:600;color:#1a1a1a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 .rv-type{display:flex;align-items:center;gap:8px;white-space:nowrap}
-.rv-type-icon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.rv-type-icon{width:30px;height:30px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .rv-type-label{font-size:13px;font-weight:500;color:#1a1a1a}
 .rv-details-primary{font-size:13px;font-weight:500;color:#1a1a1a}
 .rv-details-sub{font-size:12px;color:#7c8dac;margin-top:2px}
@@ -258,7 +258,7 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .rv-duration{font-size:13px;font-weight:600;color:#1a1a1a;white-space:nowrap}
 .rv-dur-unit{font-size:11px;font-weight:400;color:#7c8dac}
 .rv-date{font-size:13px;color:#a8b6cd;white-space:nowrap}
-.rv-status{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:20px;font-size:12px;font-weight:600;white-space:nowrap}
+.rv-status{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:4px;font-size:12px;font-weight:600;white-space:nowrap}
 .rv-status.new{background:#d4eee9;color:#005268}
 .rv-status.pending{background:#fff8ec;color:#d97706}
 .rv-status.approved{background:#f0fdf4;color:#16a34a}
@@ -278,7 +278,7 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .rv-reviewer{font-size:11px;color:#a8b6cd;display:block;margin-top:2px}
 
 /* ── TIME TRACKING VIEW ─────────────── */
-#timetracking-view{flex:1;display:flex;flex-direction:column;min-height:0;overflow:hidden;margin:12px 0;border-radius:14px;border:1px solid #e5e7ec;box-shadow:0 2px 8px rgba(0,0,0,0.06);background:#fff}
+#timetracking-view{flex:1;display:flex;flex-direction:column;min-height:0;overflow:hidden;margin:12px 0;border-radius:4px;border:1px solid #e5e7ec;box-shadow:0 2px 8px rgba(0,0,0,0.06);background:#fff}
 .tt-header{padding:20px 20px 0;border-bottom:1px solid #e5e7ec;flex-shrink:0}
 .tt-title-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;min-height:36px}
 .tt-title{font-size:16px;font-weight:800;color:#1a1a1a}
@@ -286,8 +286,8 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .tt-body{flex:1;display:flex;min-height:0;overflow:hidden}
 .tt-list-panel{flex:0 0 56%;display:flex;flex-direction:column;overflow:hidden;border-right:1px solid #e5e7ec}
 .tt-list-scroll{flex:1;overflow-y:auto;overflow-x:hidden;padding:16px;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,0.08) transparent}
-.tt-list-scroll::-webkit-scrollbar{width:6px}.tt-list-scroll::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.08);border-radius:3px}
-.tt-inner-card{border:1px solid #e5e7ec;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.05);background:#fff}
+.tt-list-scroll::-webkit-scrollbar{width:6px}.tt-list-scroll::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.08);border-radius:2px}
+.tt-inner-card{border:1px solid #e5e7ec;border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.05);background:#fff}
 .tt-section-lbl{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:#a8b6cd}
 .tt-section-lbl::after{content:'';flex:1;height:1px;background:#e5e7ec}
 .tt-section-lbl--pending{color:#92400e}.tt-section-lbl--pending::after{background:#fde68a}
@@ -304,27 +304,27 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .tt-avatar{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;flex-shrink:0;background:#fff;border:1px solid #000;color:#000}
 .tt-emp-name{font-size:13px;font-weight:600;color:#1a1a1a}
 .tt-emp-dept{font-size:11px;color:#7c8dac;margin-top:1px}
-.tt-badge-pending{display:inline-flex;align-items:center;padding:3px 10px;border-radius:20px;font-size:12px;font-weight:600;background:#fef3c7;color:#92400e}
-.tt-badge-approved{display:inline-flex;align-items:center;padding:3px 10px;border-radius:20px;font-size:12px;font-weight:600;background:#d1fae5;color:#065f46}
-.tt-badge-none{display:inline-flex;align-items:center;padding:3px 10px;border-radius:20px;font-size:12px;font-weight:600;background:#f5f5f8;color:#a8b6cd}
+.tt-badge-pending{display:inline-flex;align-items:center;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:600;background:#fef3c7;color:#92400e}
+.tt-badge-approved{display:inline-flex;align-items:center;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:600;background:#d1fae5;color:#065f46}
+.tt-badge-none{display:inline-flex;align-items:center;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:600;background:#f5f5f8;color:#a8b6cd}
 /* detail panel */
 .tt-detail-panel{flex:1;display:flex;flex-direction:column;overflow:hidden}
 .tt-detail-empty{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#a8b6cd;font-size:14px;font-weight:500;padding-bottom:120px}
 .tt-detail-inner{display:none;flex:1;flex-direction:column;overflow:hidden}
 .tt-detail-inner.visible{display:flex}
 .tt-detail-scroll{flex:1;overflow-y:auto;overflow-x:hidden;padding:24px;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,0.08) transparent}
-.tt-detail-scroll::-webkit-scrollbar{width:6px}.tt-detail-scroll::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.08);border-radius:3px}
+.tt-detail-scroll::-webkit-scrollbar{width:6px}.tt-detail-scroll::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.08);border-radius:2px}
 .tt-det-head{display:flex;align-items:center;gap:14px;margin-bottom:20px}
 .tt-det-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:500;flex-shrink:0;background:#fff;border:1px solid #000;color:#000}
 .tt-det-name{font-size:16px;font-weight:700;color:#1a1a1a}
 .tt-det-meta{font-size:13px;color:#7c8dac;margin-top:2px}
-.tt-stats{display:flex;border:1px solid #e5e7ec;border-radius:12px;overflow:hidden;margin-bottom:22px}
+.tt-stats{display:flex;border:1px solid #e5e7ec;border-radius:4px;overflow:hidden;margin-bottom:22px}
 .tt-stat{flex:1;padding:12px 14px;border-right:1px solid #e5e7ec;text-align:center}
 .tt-stat:last-child{border-right:none}
 .tt-stat-val{font-size:18px;font-weight:800;color:#1a1a1a;line-height:1.2}
 .tt-stat-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#a8b6cd;margin-top:4px}
 .tt-cal-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:#7c8dac;margin-bottom:10px}
-.tt-cal{border:1px solid #e5e7ec;border-radius:12px;overflow:hidden}
+.tt-cal{border:1px solid #e5e7ec;border-radius:4px;overflow:hidden}
 .tt-cal-head{display:grid;grid-template-columns:repeat(7,1fr);background:#f5f5f8;border-bottom:1px solid #e5e7ec}
 .tt-cal-head span{padding:8px 4px;text-align:center;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#a8b6cd}
 .tt-cal-head span.tt-wknd{color:#d1d5db}
@@ -342,7 +342,7 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .tt-cal-cell.cc-off{background:#fafafa}.tt-cal-cell.cc-off .cc-absent-lbl{color:#a8b6cd}
 .tt-cal-cell.cc-sick{background:#fafafa}.tt-cal-cell.cc-sick .cc-absent-lbl{color:#a8b6cd}
 .tt-cal-cell.cc-missing{background:#fff5f5;cursor:pointer}.tt-cal-cell.cc-missing:hover{background:#ffe8e8}.tt-cal-cell.cc-missing .cc-date{color:#f87171}.tt-cal-cell.cc-missing .cc-absent-lbl{color:#dc2626}
-.tt-fill-bar{display:none;margin-top:14px;padding:12px 14px;background:#fff;border:1px solid #e5e7ec;border-radius:10px;align-items:center;gap:10px;flex-wrap:wrap}
+.tt-fill-bar{display:none;margin-top:14px;padding:12px 14px;background:#fff;border:1px solid #e5e7ec;border-radius:4px;align-items:center;gap:10px;flex-wrap:wrap}
 .tt-fill-bar.open{display:flex}
 .tt-fill-lbl{font-size:13px;font-weight:600;color:#1a1a1a;min-width:100px}
 .tt-fill-hint{font-size:13px;color:#7c8dac}
@@ -359,7 +359,7 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .tt-btn-fill-all:hover{background:#f5f5f8}
 .tt-fillall-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.28);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.15s}
 .tt-fillall-overlay.open{opacity:1;pointer-events:all}
-.tt-fillall-box{background:#fff;border-radius:16px;border:1px solid #e5e7ec;box-shadow:0 8px 40px rgba(0,0,0,0.14);width:420px;transform:translateY(8px);transition:transform 0.15s;overflow:hidden}
+.tt-fillall-box{background:#fff;border-radius:4px;border:1px solid #e5e7ec;box-shadow:0 8px 40px rgba(0,0,0,0.14);width:420px;transform:translateY(8px);transition:transform 0.15s;overflow:hidden}
 .tt-fillall-overlay.open .tt-fillall-box{transform:translateY(0)}
 .tt-fillall-header{display:flex;align-items:center;justify-content:space-between;padding:22px 24px 0}
 .tt-fillall-title{font-size:17px;font-weight:700;color:#005268}
@@ -374,7 +374,7 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .tt-fillall-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:20px 24px;border-top:1px solid #e5e7ec;margin-top:20px}
 .tt-confirm-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.28);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.15s}
 .tt-confirm-overlay.open{opacity:1;pointer-events:all}
-.tt-confirm-box{background:#fff;border-radius:12px;border:1px solid #e5e7ec;box-shadow:0 8px 32px rgba(0,0,0,0.14);padding:24px 24px 20px;width:340px;transform:translateY(8px);transition:transform 0.15s}
+.tt-confirm-box{background:#fff;border-radius:4px;border:1px solid #e5e7ec;box-shadow:0 8px 32px rgba(0,0,0,0.14);padding:24px 24px 20px;width:340px;transform:translateY(8px);transition:transform 0.15s}
 .tt-confirm-overlay.open .tt-confirm-box{transform:translateY(0)}
 .tt-confirm-title{font-size:15px;font-weight:700;color:#1a1a1a;margin-bottom:6px}
 .tt-confirm-body{font-size:13px;color:#7c8dac;line-height:1.5;margin-bottom:20px}
@@ -389,15 +389,15 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 /* ── MODAL ───────────────────────────── */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.28);z-index:900;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.18s}
 .modal-overlay.open{opacity:1;pointer-events:all}
-.modal{background:#fff;border-radius:14px;border:1px solid #e5e7ec;box-shadow:0 8px 40px rgba(0,0,0,0.16);width:740px;max-height:82vh;display:flex;flex-direction:column;transform:translateY(10px);transition:transform 0.18s}
+.modal{background:#fff;border-radius:4px;border:1px solid #e5e7ec;box-shadow:0 8px 40px rgba(0,0,0,0.16);width:740px;max-height:82vh;display:flex;flex-direction:column;transform:translateY(10px);transition:transform 0.18s}
 .modal-overlay.open .modal{transform:translateY(0)}
 .modal-header{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid #e5e7ec;flex-shrink:0}
 .modal-title{font-size:16px;font-weight:700;color:#1a1a1a}
-.modal-close{width:32px;height:32px;border:none;background:transparent;cursor:pointer;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#7c8dac;transition:background 0.12s,color 0.12s}
+.modal-close{width:32px;height:32px;border:none;background:transparent;cursor:pointer;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#7c8dac;transition:background 0.12s,color 0.12s}
 .modal-close:hover{background:#f5f5f8;color:#1a1a1a}
 .modal-body{overflow-y:auto;padding:24px;flex:1;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,0.10) transparent}
 .modal-body::-webkit-scrollbar{width:6px}
-.modal-body::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.10);border-radius:3px}
+.modal-body::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.10);border-radius:2px}
 .modal-footer{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:16px 24px;border-top:1px solid #e5e7ec;flex-shrink:0}
 .modal-section{margin-bottom:24px}
 .modal-section:last-child{margin-bottom:0}
@@ -427,12 +427,12 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .pool-meta-label{font-size:12px;color:#a8b6cd;font-weight:500;margin-bottom:1px}
 .pool-meta-value{font-size:14px;font-weight:600;color:#1a1a1a}
 .pool-badges{position:absolute;right:20px;top:14px;display:flex;gap:6px}
-.pool-badge{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;padding:6px 14px;border-radius:8px}
+.pool-badge{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;padding:6px 14px;border-radius:4px}
 .pool-badge.holders{background:#cad8f4;color:#2456a0}
 .pool-badge.members{background:#c1ecf0;color:#0d6e7a}
 .pool-badge.grey{opacity:0.45}
 .pool-badge svg{flex-shrink:0}
-.pool-right-section{background:#fff;border:1px solid #e5e7ec;border-radius:14px;margin-bottom:16px;overflow:hidden}
+.pool-right-section{background:#fff;border:1px solid #e5e7ec;border-radius:4px;margin-bottom:16px;overflow:hidden}
 .pool-right-section-header{padding:12px 16px 12px 20px;border-bottom:1px solid #e5e7ec;font-size:14px;font-weight:700;color:#1a1a1a;display:flex;align-items:center;justify-content:space-between}
 .btn-add-member{height:30px;padding:0 10px;border-radius:4px;border:none;background:#005268;font-family:inherit;font-size:12px;font-weight:500;color:#fff;cursor:pointer;display:flex;align-items:center;gap:4px;white-space:nowrap;transition:opacity 0.12s}
 .btn-add-member:hover{opacity:0.85}
@@ -445,8 +445,8 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .member-card:last-child{border-bottom:none}
 .member-card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
 .member-name{font-size:16px;font-weight:800;color:#1a1a1a}
-.active-badge{background:#c1f0d5;color:#179484;font-size:12px;font-weight:600;padding:3px 10px;border-radius:16px}
-.inactive-badge{background:#fde8e6;color:#da4d43;font-size:12px;font-weight:600;padding:3px 10px;border-radius:16px}
+.active-badge{background:#c1f0d5;color:#179484;font-size:12px;font-weight:600;padding:3px 10px;border-radius:4px}
+.inactive-badge{background:#fde8e6;color:#da4d43;font-size:12px;font-weight:600;padding:3px 10px;border-radius:4px}
 .member-fields{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 24px}
 .mf-label{font-size:12px;color:#a8b6cd;font-weight:500;margin-bottom:4px;white-space:nowrap}
 .mf-value{font-size:14px;font-weight:600;color:#1a1a1a}
@@ -464,10 +464,10 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .inline-list-item-meta{font-size:12px;color:#7c8dac}
 .inline-list-item-remove{width:24px;height:24px;border:none;background:transparent;cursor:pointer;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#a8b6cd;flex-shrink:0;transition:background 0.12s,color 0.12s}
 .inline-list-item-remove:hover{background:#fde8e6;color:#da4d43}
-.inline-badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600}
+.inline-badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600}
 .inline-badge.active{background:#c1f0d5;color:#179484}
 .inline-badge.inactive{background:#fde8e6;color:#da4d43}
-.pool-emp-drop{position:fixed;background:#fff;border:1px solid #e5e7ec;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.12);z-index:9999;max-height:200px;overflow-y:auto;display:none;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,0.10) transparent}
+.pool-emp-drop{position:fixed;background:#fff;border:1px solid #e5e7ec;border-radius:4px;box-shadow:0 6px 20px rgba(0,0,0,0.12);z-index:9999;max-height:200px;overflow-y:auto;display:none;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,0.10) transparent}
 .pool-emp-drop.open{display:block}
 .pool-emp-drop-item{padding:10px 14px;cursor:pointer;font-size:13px;color:#1a1a1a;display:flex;align-items:center;justify-content:space-between;transition:background 0.10s}
 .pool-emp-drop-item:hover{background:#f5f5f8}
@@ -481,7 +481,8 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 
 /* ══ MY PROFILE / WORKSPACE (merged) ══ */
 
-body{font-family:'Geist',-apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#1a1a1a;font-size:14px;line-height:1.5;overflow-y:scroll}
+body{font-family:'Geist',-apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#1a1a1a;font-size:14px;line-height:1.5;overflow-y:scroll;--wfh-icon-bg:#c1f0d5;--off-icon-bg:#dbeafe}
+body.dark{--wfh-icon-bg:rgba(23,148,132,0.22);--off-icon-bg:rgba(37,99,235,0.18)}
 
 /* ── NAV (identical to platform standard) ─── */
 .nav-sub{font-family:'Lexend Exa',sans-serif;font-size:14px;font-weight:400;color:#7c8dac;line-height:1}
@@ -492,24 +493,25 @@ body{font-family:'Geist',-apple-system,BlinkMacSystemFont,sans-serif;background:
 /* ── SIDEBAR ───────────────────────────────── */
 .left-col{width:360px;flex-shrink:0;position:sticky;top:90px;align-self:flex-start;display:flex;flex-direction:column;gap:12px;max-height:calc(100vh - 106px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,0.06) transparent}
 #upcomingTimeOffCard .upcoming-row:last-child{border-bottom:none}
-.sidebar{background:#fff;border-radius:14px;border:1px solid #e5e7ec;box-shadow:0 2px 8px rgba(0,0,0,0.06);padding:18px 16px;flex-shrink:0}
-.reminders-card{background:#fff;border-radius:14px;border:1px solid #e5e7ec;box-shadow:0 2px 8px rgba(0,0,0,0.06);padding:18px 18px 12px;flex-shrink:0}
+.sidebar{background:#fff;border-radius:4px;border:1px solid #e5e7ec;box-shadow:0 2px 8px rgba(0,0,0,0.06);padding:18px 16px;flex-shrink:0}
+.reminders-card{background:#fff;border-radius:4px;border:1px solid #e5e7ec;box-shadow:0 2px 8px rgba(0,0,0,0.06);padding:18px 18px 12px;flex-shrink:0}
 .reminders-card-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#a8b6cd;margin-bottom:12px}
 .reminder-row{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #e5e7ec}
 .reminder-row:last-child{border-bottom:none;padding-bottom:6px}
-.reminder-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.reminder-icon{width:38px;height:38px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
 .reminder-info{flex:1;min-width:0}
 .reminder-name{font-size:14px;font-weight:600;color:#1a1a1a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .reminder-detail{font-size:12px;color:#7c8dac;margin-top:2px}
 .reminder-when{font-size:13px;font-weight:700;color:#005268;flex-shrink:0;text-align:right}
-.sidebar-profile{margin:0 0 14px;padding:14px 16px;background:#f5f5f8;border-radius:12px;display:flex;align-items:center;gap:14px}
+.sidebar-profile{margin:0 0 14px;padding:14px 16px;background:#f5f5f8;border-radius:4px;display:flex;align-items:center;gap:14px}
 .sp-avatar{width:52px;height:52px;border-radius:50%;background:#ffffff;border:1.5px solid #000000;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500;color:#000000;flex-shrink:0}
 .sp-info{display:flex;flex-direction:column;min-width:0}
 .sp-name{font-size:16px;font-weight:800;color:#1a1a1a;letter-spacing:-0.3px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .sp-role{font-size:12px;color:#7c8dac;margin-top:2px;font-weight:500}
 .sidebar-section{margin-bottom:14px}
 .sidebar-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#a8b6cd;margin-bottom:8px}
-.sidebar-row{display:flex;align-items:center;gap:8px;margin-bottom:8px;min-height:20px}
+.sidebar-row{display:flex;align-items:flex-start;gap:8px;margin-bottom:8px;min-height:20px}
+.sidebar-icon{margin-top:3px}
 .sidebar-icon{flex-shrink:0;display:flex;align-items:center;justify-content:center;width:16px;color:#7c8dac}
 .sidebar-text{font-size:14px;font-weight:500;color:#1a1a1a;line-height:1.45}
 .sidebar-text small{display:block;font-size:12px;color:#a8b6cd;margin-top:1px}
@@ -522,7 +524,7 @@ body{font-family:'Geist',-apple-system,BlinkMacSystemFont,sans-serif;background:
 
 /* ── CONTENT AREA ─────────────────────────── */
 .content{flex:1;min-width:0}
-.content-card-wrap{background:#fff;border-radius:14px;border:1px solid #e5e7ec;box-shadow:0 2px 8px rgba(0,0,0,0.05);overflow:hidden;height:calc(100vh - 108px);display:flex;flex-direction:column}
+.content-card-wrap{background:#fff;border-radius:4px;border:1px solid #e5e7ec;box-shadow:0 2px 8px rgba(0,0,0,0.05);overflow:hidden;height:calc(100vh - 108px);display:flex;flex-direction:column}
 .content-tabs{display:flex;gap:0;border-bottom:1px solid #e5e7ec;padding:0 24px;background:#fff}
 .content-card-wrap .ws-panel{padding:20px 24px 24px}
 #panel-directory{padding-top:20px}
@@ -551,7 +553,7 @@ body{font-family:'Geist',-apple-system,BlinkMacSystemFont,sans-serif;background:
 .today-greeting h1{font-size:22px;font-weight:700;color:#1a1a1a;margin-bottom:4px}
 .today-greeting p{font-size:13px;color:#7c8dac}
 .today-grid{display:grid;grid-template-columns:1fr 280px;gap:16px}
-.card{background:#fff;border:1px solid #e5e7ec;border-radius:14px}
+.card{background:#fff;border:1px solid #e5e7ec;border-radius:4px}
 .card-header{padding:16px 20px;border-bottom:1px solid #e5e7ec;display:flex;align-items:center;justify-content:space-between}
 .card-title{font-size:12px;font-weight:700;color:#7c8dac;text-transform:uppercase;letter-spacing:0.06em}
 .card-count{font-size:12px;font-weight:500;color:#a8b6cd}
@@ -562,7 +564,7 @@ body{font-family:'Geist',-apple-system,BlinkMacSystemFont,sans-serif;background:
 .ev-info{flex:1;min-width:0}
 .ev-name{font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:2px}
 .ev-sub{font-size:12px;color:#7c8dac}
-.ev-badge{font-size:11px;font-weight:600;padding:3px 10px;border-radius:12px;white-space:nowrap}
+.ev-badge{font-size:11px;font-weight:600;padding:3px 10px;border-radius:4px;white-space:nowrap}
 .ev-badge.birthday{background:#fff7ed;color:#ea7a1e}
 .ev-badge.anniversary{background:#ede9fe;color:#7c3aed}
 .announce-row{padding:14px 0;border-bottom:1px solid #e5e7ec}
@@ -590,11 +592,11 @@ body{font-family:'Geist',-apple-system,BlinkMacSystemFont,sans-serif;background:
 .phone-code-val{font-size:14px;font-weight:500;color:#1a1a1a;font-family:inherit;line-height:1}
 .phone-drop-arrow{color:#a8b6cd;flex-shrink:0;transition:transform 0.15s}
 .phone-code-wrap.open .phone-drop-arrow{transform:rotate(180deg)}
-.phone-code-drop{position:absolute;top:calc(100% + 6px);left:0;z-index:300;background:#fff;border:1px solid #e5e7ec;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.10),0 2px 6px rgba(0,0,0,0.06);min-width:200px;max-height:240px;overflow-y:auto;display:none;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,0.08) transparent}
+.phone-code-drop{position:absolute;top:calc(100% + 6px);left:0;z-index:300;background:#fff;border:1px solid #e5e7ec;border-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,0.10),0 2px 6px rgba(0,0,0,0.06);min-width:200px;max-height:240px;overflow-y:auto;display:none;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,0.08) transparent}
 .phone-code-wrap.open .phone-code-drop{display:block}
 .phone-code-opt{display:flex;align-items:center;gap:10px;padding:8px 14px;cursor:pointer;font-size:13px;color:#1a1a1a;transition:background 0.1s}
-.phone-code-opt:first-child{border-radius:10px 10px 0 0}
-.phone-code-opt:last-child{border-radius:0 0 10px 10px}
+.phone-code-opt:first-child{border-radius:4px 4px 0 0}
+.phone-code-opt:last-child{border-radius:0 0 4px 4px}
 .phone-code-opt:hover{background:#f5f5f8}
 .phone-code-opt.selected{background:#f0f8fa;color:#005268}
 .opt-flag{font-size:18px;line-height:1;display:flex;align-items:center;width:22px}
@@ -633,9 +635,9 @@ select.field-value{cursor:pointer;background-image:url("data:image/svg+xml,%3Csv
 .save-bar{display:none;position:sticky;top:0;z-index:10;background:#005268;color:#fff;padding:10px 24px;align-items:center;justify-content:space-between;font-size:14px;font-weight:500;margin:-24px -24px 24px}
 .save-bar.visible{display:flex}
 .save-bar-actions{display:flex;gap:8px}
-.btn-save-bar{background:#fff;color:#005268;border:none;border-radius:6px;height:34px;padding:0 18px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:opacity 0.15s}
+.btn-save-bar{background:#fff;color:#005268;border:none;border-radius:4px;height:34px;padding:0 18px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:opacity 0.15s}
 .btn-save-bar:hover{opacity:0.85}
-.btn-discard-bar{background:transparent;color:rgba(255,255,255,0.75);border:1.5px solid rgba(255,255,255,0.4);border-radius:6px;height:34px;padding:0 16px;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;transition:color 0.15s,border-color 0.15s}
+.btn-discard-bar{background:transparent;color:rgba(255,255,255,0.75);border:1.5px solid rgba(255,255,255,0.4);border-radius:4px;height:34px;padding:0 16px;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;transition:color 0.15s,border-color 0.15s}
 .btn-discard-bar:hover{color:#fff;border-color:rgba(255,255,255,0.7)}
 /* Datepicker */
 .datepicker-wrap{position:relative;width:100%}
@@ -645,17 +647,17 @@ select.field-value{cursor:pointer;background-image:url("data:image/svg+xml,%3Csv
 .datepicker-input:focus{border-color:#005268;box-shadow:0 0 0 3px rgba(0,82,104,0.12)}
 .datepicker-input::-webkit-calendar-picker-indicator{display:none}
 .datepicker-icon{position:absolute;right:10px;top:50%;transform:translateY(-50%);color:#7c8dac;pointer-events:none;display:flex;align-items:center}
-.datepicker-cal{position:absolute;top:calc(100% + 6px);left:0;z-index:200;background:#fff;border:1px solid #e5e7ec;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);width:280px;padding:16px;display:none;user-select:none}
+.datepicker-cal{position:absolute;top:calc(100% + 6px);left:0;z-index:200;background:#fff;border:1px solid #e5e7ec;border-radius:4px;box-shadow:0 8px 32px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);width:280px;padding:16px;display:none;user-select:none}
 .datepicker-cal.open{display:block}
 .dp-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
 .dp-month-label{font-size:14px;font-weight:700;color:#1a1a1a;cursor:pointer}
 .dp-month-label:hover{color:#005268}
-.dp-nav{width:28px;height:28px;border-radius:6px;border:1px solid #e5e7ec;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#7c8dac;transition:background 0.15s,color 0.15s,border-color 0.15s;flex-shrink:0}
+.dp-nav{width:28px;height:28px;border-radius:4px;border:1px solid #e5e7ec;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#7c8dac;transition:background 0.15s,color 0.15s,border-color 0.15s;flex-shrink:0}
 .dp-nav:hover{background:#f5f5f8;color:#005268;border-color:#c1ecf0}
 .dp-weekdays{display:grid;grid-template-columns:repeat(7,1fr);margin-bottom:6px}
 .dp-wd{text-align:center;font-size:10px;font-weight:700;color:#a8b6cd;letter-spacing:0.04em;padding:4px 0}
 .dp-days{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
-.dp-day{height:34px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:#1a1a1a;border-radius:6px;cursor:pointer;transition:background 0.1s,color 0.1s}
+.dp-day{height:34px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:#1a1a1a;border-radius:4px;cursor:pointer;transition:background 0.1s,color 0.1s}
 .dp-day:hover{background:#f0f8fa;color:#005268}
 .dp-day.other-month{color:#d0d7e3}
 .dp-day.other-month:hover{background:#f5f5f8;color:#a8b6cd}
@@ -663,7 +665,7 @@ select.field-value{cursor:pointer;background-image:url("data:image/svg+xml,%3Csv
 .dp-day.selected:hover{background:#004257}
 .dp-day.today:not(.selected){color:#005268;font-weight:700;border:1.5px solid #c1ecf0}
 .dp-year-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;max-height:200px;overflow-y:auto}
-.dp-year-item{height:34px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:#1a1a1a;border-radius:6px;cursor:pointer;transition:background 0.1s}
+.dp-year-item{height:34px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:#1a1a1a;border-radius:4px;cursor:pointer;transition:background 0.1s}
 .dp-year-item:hover{background:#f0f8fa;color:#005268}
 .dp-year-item.selected{background:#005268;color:#fff;font-weight:700}
 
@@ -681,19 +683,19 @@ select.field-value{cursor:pointer;background-image:url("data:image/svg+xml,%3Csv
 .dir-select:focus{border-color:#005268}
 .dir-count{font-size:13px;color:#7c8dac;margin-left:auto}
 .dept-filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
-.dept-chip{height:28px;padding:0 12px;border-radius:6px;border:1px solid #e5e7ec;background:#fff;font-size:12px;font-weight:500;color:#7c8dac;cursor:pointer;font-family:inherit;transition:all 0.1s}
-.dept-chip.active{background:#005268;color:#fff;border-color:#005268}
+.dept-chip{height:28px;padding:0 12px;border-radius:4px;border:1px solid #e5e7ec;background:#fff;font-size:12px;font-weight:500;color:#7c8dac;cursor:pointer;font-family:inherit;transition:all 0.1s}
+.dept-chip.active{background:rgba(0,82,104,0.08);color:#005268;border-color:#005268}
 .dept-chip:hover:not(.active){background:#f5f5f8}
 .dir-list{display:flex;flex-direction:column}
 .dir-alpha-header{font-size:11px;font-weight:700;color:#a8b6cd;letter-spacing:0.1em;padding:12px 0 8px;border-bottom:1px solid #e5e7ec}
-.dir-row{display:grid;grid-template-columns:68px 1fr 1fr 260px;align-items:center;gap:16px;padding:12px 16px;border-bottom:1px solid #e5e7ec;cursor:pointer;border-radius:8px;margin:0 -16px;transition:background 0.1s}
+.dir-row{display:grid;grid-template-columns:68px 1fr 1fr 260px;align-items:center;gap:16px;padding:12px 16px;border-bottom:1px solid #e5e7ec;cursor:pointer;border-radius:4px;margin:0 -16px;transition:background 0.1s}
 .dir-row:last-child{border-bottom:none}
 .dir-row:hover{background:#f5f7fa}
 .dir-row:hover .dir-name{color:#003d50}
 .dir-avatar{width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid #000;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:500;color:#000;flex-shrink:0}
 .dir-info{min-width:0}
 .dir-name{font-size:14px;font-weight:700;color:#1a1a1a;display:flex;align-items:center;gap:6px;transition:color 0.1s}
-.dir-you{font-size:10px;font-weight:700;padding:2px 6px;border-radius:6px;background:#f0f8fa;color:#005268}
+.dir-you{font-size:10px;font-weight:700;padding:2px 6px;border-radius:4px;background:#f0f8fa;color:#005268}
 .dir-sub{font-size:12px;color:#7c8dac;margin-top:2px}
 .dir-contact{min-width:0;display:flex;flex-direction:column;gap:4px}
 .dir-contact-row{display:flex;align-items:center;gap:6px;font-size:12px;color:#1a1a1a}
@@ -703,7 +705,7 @@ select.field-value{cursor:pointer;background-image:url("data:image/svg+xml,%3Csv
 .dir-manager-link:hover{text-decoration:underline;text-underline-offset:2px}
 /* ── EMPLOYEE QUICK CARD ── */
 .emp-qcard-backdrop{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.45)}
-.emp-qcard{background:#fff;border-radius:16px;border:1px solid #e5e7ec;box-shadow:0 24px 60px rgba(0,0,0,0.2);width:520px;padding:28px;position:relative}
+.emp-qcard{background:#fff;border-radius:4px;border:1px solid #e5e7ec;box-shadow:0 24px 60px rgba(0,0,0,0.2);width:520px;padding:28px;position:relative}
 .emp-qcard-close{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;border:1.5px solid #e5e7ec;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#7c8dac;transition:background 0.12s}
 .emp-qcard-close:hover{background:#f5f5f8}
 .emp-qcard-head{display:flex;align-items:center;gap:16px;margin-bottom:20px;padding-right:40px}
@@ -718,7 +720,7 @@ select.field-value{cursor:pointer;background-image:url("data:image/svg+xml,%3Csv
 .emp-qcard-email-main{display:flex;align-items:center;gap:12px;flex:1;min-width:0}
 .emp-qcard-email-text{flex:1;min-width:0}
 .emp-qcard-email-actions{display:flex;gap:8px;flex-shrink:0;align-items:center}
-.eqa-btn{width:32px;height:32px;border:none;background:transparent;color:#a8b6cd;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:6px;transition:color 0.12s,background 0.12s;padding:0;flex-shrink:0}
+.eqa-btn{width:32px;height:32px;border:none;background:transparent;color:#a8b6cd;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:4px;transition:color 0.12s,background 0.12s;padding:0;flex-shrink:0}
 .eqa-btn:hover{color:#005268;background:#f0f4f8}
 .eqa-btn svg{width:18px;height:18px;flex-shrink:0}
 .dir-name-link{cursor:pointer}
@@ -731,19 +733,19 @@ select.field-value{cursor:pointer;background-image:url("data:image/svg+xml,%3Csv
 .wfh-toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
 .wfh-month-nav{display:flex;align-items:center;gap:10px}
 .wfh-month-label{font-size:16px;font-weight:700;color:#1a1a1a;min-width:176px;text-align:center}
-.wfh-nav-btn{width:32px;height:32px;border-radius:6px;border:1px solid #e5e7ec;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#7c8dac;transition:background 0.12s;flex-shrink:0}
+.wfh-nav-btn{width:32px;height:32px;border-radius:4px;border:1px solid #e5e7ec;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#7c8dac;transition:background 0.12s;flex-shrink:0}
 .wfh-nav-btn:hover{background:#f5f5f8;color:#1a1a1a}
 .wfh-legend{display:flex;gap:14px;align-items:center}
 .wfh-legend-item{display:flex;align-items:center;gap:6px;font-size:12px;color:#7c8dac;font-weight:500}
-.wfh-legend-dot{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+.wfh-legend-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
 .wfh-legend-dot.wfh{background:#c1f0d5}
 .wfh-legend-dot.office{background:#dbeafe}
 .wfh-legend-dot.away{background:#fde8e6}
 .wfh-summary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:16px}
-.wfh-prefs-card{background:#fff;border:1px solid #e5e7ec;border-radius:14px;padding:20px 22px;margin-bottom:16px}
+.wfh-prefs-card{background:#fff;border:1px solid #e5e7ec;border-radius:4px;padding:20px 22px;margin-bottom:16px}
 .wfh-prefs-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
 .wfh-prefs-title{font-size:14px;font-weight:700;color:#1a1a1a}
-.wfh-prefs-badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:10px;white-space:nowrap}
+.wfh-prefs-badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;white-space:nowrap}
 .wfh-prefs-badge.approved{background:#c1f0d5;color:#179484}
 .wfh-prefs-badge.pending{background:#fef3c7;color:#d97706}
 .wfh-prefs-sub{font-size:12px;color:#7c8dac;margin-bottom:16px;line-height:1.4}
@@ -751,18 +753,18 @@ select.field-value{cursor:pointer;background-image:url("data:image/svg+xml,%3Csv
 .wfh-day-check{display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;user-select:none}
 .wfh-day-check input{display:none}
 .wfh-day-label{font-size:11px;font-weight:600;color:#7c8dac;text-transform:uppercase;letter-spacing:0.06em}
-.wfh-day-box{width:38px;height:38px;border-radius:10px;border:1.5px solid #e5e7ec;background:#f5f5f8;display:flex;align-items:center;justify-content:center;transition:all 0.12s}
+.wfh-day-box{width:38px;height:38px;border-radius:4px;border:1.5px solid #e5e7ec;background:#f5f5f8;display:flex;align-items:center;justify-content:center;transition:all 0.12s}
 .wfh-day-check input:checked~.wfh-day-box{background:#c1f0d5;border-color:#c1f0d5;color:#179484}
 .wfh-day-check.pending-day input:checked~.wfh-day-box{background:#fef3c7;border-color:#f59e0b;color:#d97706}
 .wfh-day-check input:checked~.wfh-day-box svg{opacity:1}
 .wfh-day-check .wfh-day-box svg{opacity:0;transition:opacity 0.12s}
 .wfh-day-check:hover .wfh-day-box{border-color:#7c8dac}
 .wfh-prefs-footer{display:flex;justify-content:flex-end}
-.wfh-stat-card{background:#fff;border:1px solid #e5e7ec;border-radius:12px;padding:18px 20px;display:flex;align-items:center;gap:14px}
-.wfh-stat-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.wfh-stat-card{background:#fff;border:1px solid #e5e7ec;border-radius:4px;padding:18px 20px;display:flex;align-items:center;gap:14px}
+.wfh-stat-icon{width:40px;height:40px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .wfh-stat-num{font-size:22px;font-weight:700;color:#1a1a1a;line-height:1}
 .wfh-stat-label{font-size:12px;color:#7c8dac;margin-top:2px}
-.wfh-cal{background:#fff;border:1px solid #e5e7ec;border-radius:14px;overflow:hidden;flex:1;display:flex;flex-direction:column;margin-bottom:0}
+.wfh-cal{background:#fff;border:1px solid #e5e7ec;border-radius:4px;overflow:hidden;flex:1;display:flex;flex-direction:column;margin-bottom:0}
 .wfh-cal-head{display:grid;grid-template-columns:repeat(7,1fr);border-bottom:1px solid #e5e7ec;background:#f5f5f8;flex-shrink:0}
 .wfh-cal-daylabel{padding:10px 0;text-align:center;font-size:11px;font-weight:700;color:#7c8dac;text-transform:uppercase;letter-spacing:0.06em}
 .wfh-cal-body{display:grid;grid-template-columns:repeat(7,1fr);flex:1;grid-auto-rows:1fr}
@@ -773,7 +775,7 @@ select.field-value{cursor:pointer;background-image:url("data:image/svg+xml,%3Csv
 .wfh-cell.today{background:#f0f8fa}
 .wfh-cell-num{font-size:12px;font-weight:600;color:#7c8dac}
 .wfh-cell.today .wfh-cell-num{background:#005268;color:#fff;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px}
-.wfh-status-pill{font-size:10px;font-weight:700;padding:3px 7px;border-radius:5px;text-transform:uppercase;letter-spacing:0.04em;align-self:flex-start}
+.wfh-status-pill{font-size:10px;font-weight:700;padding:3px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:0.04em;align-self:flex-start;margin-top:4px}
 .wfh-status-pill.wfh{background:#c1f0d5;color:#179484}
 .wfh-status-pill.office{background:#dbeafe;color:#1d4ed8}
 .wfh-status-pill.away{background:#fde8e6;color:#da4d43}
@@ -786,8 +788,8 @@ select.field-value{cursor:pointer;background-image:url("data:image/svg+xml,%3Csv
 .req-toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
 .req-filter-tabs{display:flex;gap:4px}
 .req-tab{height:32px;padding:0 14px;border-radius:4px;border:1px solid #e5e7ec;background:#fff;font-size:12px;font-weight:500;color:#7c8dac;cursor:pointer;font-family:inherit;transition:all 0.12s}
-.req-tab.active{background:#005268;border-color:#005268;color:#fff}
-.req-table-wrap{border:1px solid #e5e7ec;border-radius:14px;overflow:hidden;margin-bottom:24px}
+.req-tab.active{background:rgba(0,82,104,0.08);border-color:#005268;color:#005268}
+.req-table-wrap{border:1px solid #e5e7ec;border-radius:4px;overflow:hidden;margin-bottom:24px}
 .req-table-scroll{overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,0.12) transparent}
 table.req-table{width:100%;border-collapse:collapse}
 .req-table th{text-align:left;padding:8px 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#a8b6cd;border-bottom:1px solid #e5e7ec;background:#f5f5f8;white-space:nowrap;position:sticky;top:0;z-index:1}
@@ -795,8 +797,8 @@ table.req-table{width:100%;border-collapse:collapse}
 .req-table tr:last-child td{border-bottom:none}
 .req-table td small{display:block;font-size:12px;color:#a8b6cd;margin-top:1px}
 .req-table td.req-type-cell{display:flex;align-items:center;gap:10px}
-.req-icon-sm{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.req-status{font-size:11px;font-weight:700;padding:3px 10px;border-radius:10px;white-space:nowrap;display:inline-block}
+.req-icon-sm{width:28px;height:28px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.req-status{font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;white-space:nowrap;display:inline-block}
 .req-status.pending{background:#fef3c7;color:#d97706}
 .req-status.approved{background:#c1f0d5;color:#179484}
 .req-status.denied{background:#fde8e6;color:#da4d43}
@@ -807,17 +809,17 @@ table.req-table{width:100%;border-collapse:collapse}
 ══════════════════════════════════════════ */
 .modal-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .req-type-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
-.req-type-btn{padding:16px 12px;border:2px solid #e5e7ec;border-radius:10px;cursor:pointer;text-align:center;background:#fff;transition:all 0.12s;display:flex;flex-direction:column;align-items:center;gap:6px}
+.req-type-btn{padding:16px 12px;border:2px solid #e5e7ec;border-radius:4px;cursor:pointer;text-align:center;background:#fff;transition:all 0.12s;display:flex;flex-direction:column;align-items:center;gap:6px}
 .req-type-btn:hover{border-color:#7c8dac}
 .req-type-btn.selected{border-color:#005268;background:#f0f8fa}
-.req-type-icon-lg{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.req-type-icon-lg{width:36px;height:36px;border-radius:4px;display:flex;align-items:center;justify-content:center}
 .req-type-label{font-size:13px;font-weight:600;color:#1a1a1a}
 .req-type-desc{font-size:11px;color:#7c8dac}
 
 /* ── APP DROPDOWN ─────────────────────────── */
 
 /* ── TOAST ────────────────────────────────── */
-.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(16px);background:#1a1a1a;color:#fff;font-size:14px;font-weight:500;padding:12px 20px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity 0.2s,transform 0.2s;z-index:9999;white-space:nowrap}
+.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(16px);background:#1a1a1a;color:#fff;font-size:14px;font-weight:500;padding:12px 20px;border-radius:4px;opacity:0;pointer-events:none;transition:opacity 0.2s,transform 0.2s;z-index:9999;white-space:nowrap}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 /* ══════════════════════════════════════════
@@ -832,7 +834,7 @@ table.req-table{width:100%;border-collapse:collapse}
 .ts-spacer{flex:1}
 .ts-btn{background:transparent;border:1px solid #c4cdd8;border-radius:4px;height:38px;padding:0 20px;font-size:14px;color:#7c8dac;cursor:pointer;display:flex;align-items:center;gap:6px;font-weight:600;font-family:inherit;transition:background 0.12s}
 .ts-btn:hover{background:#f5f5f8}
-.ts-btn-primary{background:#005268;border:none;border-radius:4px;height:38px;padding:0 20px;font-size:14px;color:#fff;cursor:pointer;display:flex;align-items:center;gap:6px;font-weight:600;font-family:inherit;transition:opacity 0.12s}
+.ts-btn-primary{background:#005268;border:none;border-radius:4px;height:38px;padding:0 20px;font-size:14px;color:#fff;cursor:pointer;display:flex;align-items:center;gap:6px;font-weight:500;font-family:inherit;transition:opacity 0.12s}
 .ts-btn-primary:hover{opacity:0.85}
 .fill-modal-row{display:flex;gap:16px;margin-bottom:20px}
 .fill-modal-field{flex:1}
@@ -842,30 +844,30 @@ table.req-table{width:100%;border-collapse:collapse}
 .fill-modal-note{font-size:12px;color:#7c8dac;margin-bottom:20px;line-height:1.5}
 .fill-modal-footer{display:flex;justify-content:space-between;gap:10px;border-top:1px solid #e5e7ec;padding-top:20px}
 .period-heading{display:flex;align-items:center;gap:10px;margin-bottom:16px}
-.period-icon{width:30px;height:30px;background:#f5f5f8;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px}
+.period-icon{width:30px;height:30px;background:#f5f5f8;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:14px}
 .period-label{font-size:16px;font-weight:700}
 .period-divider{display:flex;align-items:center;gap:10px;margin:8px 0;color:#a8b6cd;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em}
 .period-divider::before,.period-divider::after{content:'';flex:1;height:1px;background:#e5e7ec}
 .day-row{display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid #f5f5f8}
 .day-row:last-child{border-bottom:none}
-.day-chip{width:68px;background:#fff;border-radius:8px;padding:7px 10px;flex-shrink:0;text-align:left}
+.day-chip{width:68px;background:#fff;border-radius:4px;padding:7px 10px;flex-shrink:0;text-align:left}
 .day-chip.today{background:#005268}
 .day-name{font-size:12px;font-weight:700;color:#1a1a1a}
 .day-name.today{color:white}
-.day-date{font-size:10px;color:#a8b6cd;margin-top:1px}
+.day-date{font-size:11px;font-weight:500;color:#a8b6cd;margin-top:1px}
 .day-date.today{color:rgba(255,255,255,0.65)}
 .day-hours{font-size:14px;font-weight:700;color:#1a1a1a;min-width:70px}
 .day-hours.zero{color:#a8b6cd;font-weight:500}
 .day-hours.empty{color:#e5e7ec;font-weight:400}
 .day-range{font-size:12px;color:#a8b6cd}
-.approval-note{display:flex;align-items:center;gap:8px;background:#f5f5f8;border:1px solid #e5e7ec;border-radius:10px;padding:12px 16px;font-size:12px;color:#7c8dac;margin-top:16px}
-.ts-stat-card{background:#fff;border:1px solid #e5e7ec;border-radius:12px;padding:16px;margin-bottom:12px}
+.approval-note{display:flex;align-items:center;gap:8px;background:#f5f5f8;border:1px solid #e5e7ec;border-radius:4px;padding:12px 16px;font-size:12px;color:#7c8dac;margin-top:16px}
+.ts-stat-card{background:#fff;border:1px solid #e5e7ec;border-radius:4px;padding:16px;margin-bottom:12px}
 .ts-stat-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:#a8b6cd;margin-bottom:4px}
 .ts-stat-value{font-size:26px;font-weight:800;color:#005268;line-height:1.1}
 .ts-stat-sub{font-size:12px;color:#a8b6cd;margin-top:4px}
 .mini-chart{display:flex;align-items:flex-end;gap:5px;height:40px;margin-top:14px}
 .mini-bar-wrap{display:flex;flex-direction:column;align-items:center;gap:4px;flex:1}
-.mini-bar{width:100%;border-radius:3px 3px 0 0;min-height:4px}
+.mini-bar{width:100%;border-radius:2px 3px 0 0;min-height:4px}
 .mini-bar.filled{background:#005268}
 .mini-bar.empty{background:#e5e7ec}
 .mini-bar-label{font-size:10px;color:#a8b6cd}
@@ -877,7 +879,7 @@ table.req-table{width:100%;border-collapse:collapse}
    TIME OFF
 ══════════════════════════════════════════ */
 .balance-grid{display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap}
-.balance-card{flex:1;min-width:140px;background:#fff;border:1px solid #e5e7ec;border-radius:12px;padding:16px;position:relative}
+.balance-card{flex:1;min-width:140px;background:#fff;border:1px solid #e5e7ec;border-radius:4px;padding:16px;position:relative}
 .bal-icon{margin-bottom:10px;color:#005268;display:flex}
 .bal-number{font-size:28px;font-weight:800;color:#1a1a1a;line-height:1}
 .bal-name{font-size:12px;font-weight:700;color:#1a1a1a;margin-top:6px}
@@ -887,7 +889,7 @@ table.req-table{width:100%;border-collapse:collapse}
 .bal-action-btn:hover{border-color:#7c8dac}
 .upcoming-row{display:flex;align-items:center;gap:14px;padding:11px 0;border-bottom:1px solid #f5f5f8}
 .upcoming-row:last-child{border-bottom:none}
-.upcoming-icon-wrap{width:32px;height:32px;background:#f5f5f8;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#7c8dac;flex-shrink:0}
+.upcoming-icon-wrap{width:32px;height:32px;background:#f5f5f8;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#7c8dac;flex-shrink:0}
 .upcoming-date{font-size:14px;font-weight:700;color:#1a1a1a;min-width:110px}
 .upcoming-name{font-size:14px;color:#7c8dac}
 .hist-controls{display:flex;gap:8px;margin-bottom:10px;align-items:center;flex-wrap:wrap}
@@ -903,8 +905,10 @@ table.req-table{width:100%;border-collapse:collapse}
 table.hist-table{width:100%;border-collapse:collapse}
 .hist-table th{text-align:left;padding:8px 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#a8b6cd;border-bottom:1px solid #e5e7ec;background:#f5f5f8;white-space:nowrap;user-select:none;position:sticky;top:0;z-index:1}
 .hist-table td{padding:8px 16px;font-size:14px;color:#1a1a1a;border-bottom:1px solid #f5f5f8;vertical-align:middle;white-space:nowrap}
+.hist-table td:first-child{padding-right:32px}
+.hist-table th:first-child{padding-right:32px}
 .hist-table tr:last-child td{border-bottom:none}
-.hist-table td.num{text-align:right;font-weight:600}
+.hist-table td.num{text-align:right;font-weight:600;color:#a8b6cd}
 .hist-table td.pos{color:#179484}
 .hist-table td.neg{color:#da4d43}
 .timeoff-view{display:block}
@@ -913,7 +917,7 @@ table.hist-table{width:100%;border-collapse:collapse}
 .back-link:hover{color:#005268}
 .request-page-title{font-size:26px;font-weight:800;color:#005268;margin-bottom:24px}
 .request-layout{display:flex;gap:24px;align-items:stretch}
-.request-form-wrap{flex:1;background:#fff;border:1px solid #e5e7ec;border-radius:12px;padding:24px;min-width:0}
+.request-form-wrap{flex:1;background:#fff;border:1px solid #e5e7ec;border-radius:4px;padding:24px;min-width:0}
 .req-field{margin-bottom:20px}
 .req-label{font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:7px;display:flex;gap:2px}
 .req-label .req-star{color:#da4d43}
@@ -937,14 +941,14 @@ table.hist-table{width:100%;border-collapse:collapse}
 .req-amount-unit{font-size:14px;color:#7c8dac}
 .req-textarea-to{width:100%;border:1px solid #e5e7ec;border-radius:4px;padding:10px 12px;font-size:14px;color:#1a1a1a;resize:vertical;min-height:90px;outline:none;font-family:inherit;transition:border-color 0.15s}
 .req-textarea-to:focus{border-color:#005268}
-.request-balance-sidebar{width:320px;flex-shrink:0;background:#fff;border:1px solid #e5e7ec;border-radius:12px;overflow:hidden}
+.request-balance-sidebar{width:320px;flex-shrink:0;background:#fff;border:1px solid #e5e7ec;border-radius:4px;overflow:hidden}
 .bal-sidebar-header{padding:14px 18px;border-bottom:1px solid #e5e7ec;display:flex;align-items:center;gap:10px;font-size:14px;font-weight:400;color:#7c8dac}
 .bal-sidebar-date{border:none;height:32px;padding:0;font-size:14px;font-weight:700;color:#1a1a1a;flex:1;text-align:right;outline:none;background:transparent}
 .bal-sidebar-date::-webkit-calendar-picker-indicator{display:none}
 .bal-sidebar-date:focus{border-color:#005268}
 .bal-sidebar-item{display:flex;align-items:center;gap:12px;padding:12px 18px;border-bottom:1px solid #f5f5f8}
 .bal-sidebar-item:last-child{border-bottom:none}
-.bal-sidebar-icon{width:30px;height:30px;background:#f5f5f8;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#7c8dac;flex-shrink:0}
+.bal-sidebar-icon{width:30px;height:30px;background:#f5f5f8;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#7c8dac;flex-shrink:0}
 .bal-sidebar-name{font-size:12px;font-weight:600;color:#1a1a1a}
 .bal-sidebar-amount{font-size:12px;color:#a8b6cd;margin-top:1px}
 .request-footer{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-top:20px;border-top:1px solid #e5e7ec;margin-top:24px}
@@ -960,23 +964,23 @@ table.hist-table{width:100%;border-collapse:collapse}
 .modal-backdrop.open{display:flex}
 .req-success-backdrop{position:fixed;inset:0;background:rgba(20,30,48,0.35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:900;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.25s}
 .req-success-backdrop.open{opacity:1;pointer-events:auto}
-.req-success-card{background:#fff;border-radius:20px;padding:40px 36px 32px;width:360px;max-width:92vw;box-shadow:0 24px 64px rgba(0,0,0,0.18);text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px}
+.req-success-card{background:#fff;border-radius:4px;padding:40px 36px 32px;width:360px;max-width:92vw;box-shadow:0 24px 64px rgba(0,0,0,0.18);text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px}
 .req-success-icon{width:64px;height:64px;border-radius:50%;background:#e8f5f3;display:flex;align-items:center;justify-content:center;color:#179484}
 .req-success-title{font-size:20px;font-weight:800;color:#005268;margin:0}
 .req-success-sub{font-size:14px;color:#7c8dac;margin:0;line-height:1.5}
 .req-success-actions{display:flex;gap:10px;margin-top:8px;width:100%}
-.req-success-btn-new{flex:1;height:40px;background:#fff;color:#005268;border:1.5px solid #005268;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:background 0.15s,color 0.15s}
+.req-success-btn-new{flex:1;height:40px;background:#fff;color:#005268;border:1.5px solid #005268;border-radius:4px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:background 0.15s,color 0.15s}
 .req-success-btn-new:hover{background:#005268;color:#fff}
-.req-success-btn-back{flex:1;height:40px;background:#005268;color:#fff;border:none;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:background 0.15s}
+.req-success-btn-back{flex:1;height:40px;background:#005268;color:#fff;border:none;border-radius:4px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:background 0.15s}
 .req-success-btn-back:hover{background:#003d50}
-.modal-backdrop .modal{background:#fff;border-radius:16px;width:560px;max-width:94vw;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.2);border:none;transform:none;transition:none;max-height:none;display:block}
+.modal-backdrop .modal{background:#fff;border-radius:4px;width:560px;max-width:94vw;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.2);border:none;transform:none;transition:none;max-height:none;display:block}
 .modal-backdrop .modal-header{padding:22px 24px 18px;border-bottom:1px solid #e5e7ec;display:flex;align-items:center;justify-content:space-between}
 .modal-backdrop .modal-title{font-size:18px;font-weight:800;color:#005268}
 .modal-backdrop .modal-close{width:32px;height:32px;border-radius:50%;border:1.5px solid #e5e7ec;background:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;color:#7c8dac;transition:border-color 0.15s;flex-shrink:0}
 .modal-backdrop .modal-close:hover{border-color:#7c8dac;color:#005268}
 .modal-backdrop .modal-footer{padding:16px 24px;background:#fff;border-top:1px solid #e5e7ec;display:flex;align-items:center;justify-content:space-between}
 .modal-day{padding:18px 24px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #e5e7ec}
-.modal-day-icon{width:42px;height:42px;background:#f5f5f8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.modal-day-icon{width:42px;height:42px;background:#f5f5f8;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
 .modal-day-label{font-size:18px;font-weight:700;color:#1a1a1a}
 .modal-entries{padding:20px 24px}
 .entry-row{display:flex;align-items:flex-end;gap:10px;margin-bottom:14px}
@@ -1002,13 +1006,13 @@ table.hist-table{width:100%;border-collapse:collapse}
 .btn-save.ready{border-color:#005268;color:#005268;cursor:pointer}
 .btn-save.ready:hover{background:#005268;color:#fff}
 .calc-modal-user{display:flex;align-items:center;gap:14px;padding:18px 24px;border-bottom:1px solid #e5e7ec}
-.calc-user-avatar{width:44px;height:44px;border-radius:10px;background:#e5e7ec;overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#7c8dac}
+.calc-user-avatar{width:44px;height:44px;border-radius:4px;background:#e5e7ec;overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#7c8dac}
 .calc-user-name{font-size:16px;font-weight:700}
 .calc-fields{padding:20px 24px;display:flex;gap:14px;border-bottom:1px solid #e5e7ec}
 .calc-result-wrap{padding:16px 24px;border-bottom:1px solid #e5e7ec}
-.calc-result-box{border:1px solid #e5e7ec;border-radius:10px;padding:18px 20px}
+.calc-result-box{border:1px solid #e5e7ec;border-radius:4px;padding:18px 20px}
 .calc-result-number{font-size:28px;font-weight:800;color:#005268}
-.calc-accrual-btn{display:inline-flex;align-items:center;gap:7px;margin-top:14px;border:1.5px solid #005268;border-radius:8px;padding:7px 14px;font-size:14px;font-weight:600;color:#005268;cursor:pointer;background:#fff;transition:background 0.15s}
+.calc-accrual-btn{display:inline-flex;align-items:center;gap:7px;margin-top:14px;border:1.5px solid #005268;border-radius:4px;padding:7px 14px;font-size:14px;font-weight:600;color:#005268;cursor:pointer;background:#fff;transition:background 0.15s}
 .calc-accrual-btn:hover{background:#f5f5f8}
 .calc-footer{padding:14px 24px;background:#fff;display:flex;justify-content:flex-end}
 .btn-close-calc{background:#fff;color:#005268;border:1.5px solid #005268;border-radius:4px;height:40px;padding:0 26px;font-size:14px;font-weight:500;cursor:pointer;transition:background 0.15s,color 0.15s}
@@ -1018,7 +1022,7 @@ table.hist-table{width:100%;border-collapse:collapse}
 #myprofile-view .left-col{top:16px;max-height:calc(100vh - 106px)}
 
 /* ── PROFILE DROPDOWN ─────────────────────────────────── */
-.profile-drop{position:fixed;top:82px;right:40px;width:220px;background:#fff;border:1px solid #e5e7ec;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);z-index:9000;padding:6px 0;display:none}
+.profile-drop{position:fixed;top:82px;right:40px;width:220px;background:#fff;border:1px solid #e5e7ec;border-radius:4px;box-shadow:0 8px 32px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);z-index:9000;padding:6px 0;display:none}
 .profile-drop.open{display:block}
 .profile-drop-header{padding:12px 16px 10px;border-bottom:1px solid #e5e7ec}
 .profile-drop-name{font-size:13px;font-weight:700;color:#1a1a1a}
@@ -1028,7 +1032,7 @@ table.hist-table{width:100%;border-collapse:collapse}
 .profile-drop-item:hover{background:#f5f5f8}
 .profile-drop-item-icon{flex-shrink:0;color:#7c8dac;display:flex;align-items:center}
 .profile-drop-item-label{flex:1;font-size:13px;font-weight:500;color:#1a1a1a}
-.dm-switch{width:32px;height:18px;border-radius:9px;background:#e5e7ec;position:relative;flex-shrink:0;transition:background 0.18s}
+.dm-switch{width:32px;height:18px;border-radius:8px;background:#e5e7ec;position:relative;flex-shrink:0;transition:background 0.18s}
 .dm-switch.on{background:#005268}
 .dm-thumb{position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.20);transition:transform 0.18s}
 .dm-switch.on .dm-thumb{transform:translateX(14px)}
@@ -1041,7 +1045,7 @@ table.hist-table{width:100%;border-collapse:collapse}
 body.dark{background:#0f1422;color:#e2e8f4;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,0.08) transparent}
 body.dark *::-webkit-scrollbar{width:6px;height:6px}
 body.dark *::-webkit-scrollbar-track{background:transparent}
-body.dark *::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.09);border-radius:3px}
+body.dark *::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.09);border-radius:2px}
 body.dark *::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,0.15)}
 /* NAV */
 body.dark .top-nav{background:#131a2b;border-bottom-color:rgba(255,255,255,0.12)}
@@ -1078,16 +1082,16 @@ body.dark .left-header{border-bottom-color:rgba(255,255,255,0.12)}
 body.dark .left-title{color:#e2e8f4}
 body.dark .groupby-label{color:#8a9bc0}
 /* BUTTONS */
-body.dark .btn-primary{background:#0cb8d0}
+body.dark .btn-primary{background:#14d4ea;color:#0f1422}
 body.dark .btn-primary:disabled,body.dark .btn-primary[disabled]{background:#1d273c;color:rgba(255,255,255,0.22);opacity:1!important;cursor:not-allowed}
 body.dark .btn-outline{background:#1d273c;border-color:rgba(255,255,255,0.12);color:#c8d4e8}
 body.dark .btn-outline:hover{border-color:#0cb8d0;color:#0cb8d0}
 body.dark .btn-outline:disabled,body.dark .btn-outline[disabled]{background:#1d273c;border-color:rgba(255,255,255,0.06);color:rgba(255,255,255,0.18);opacity:1!important;cursor:not-allowed}
 body.dark .btn-cancel{background:transparent;border-color:rgba(255,255,255,0.10);color:#8a9bc0}
 body.dark .btn-cancel:hover{background:rgba(255,255,255,0.04)}
-body.dark .btn-cta{background:#0cb8d0}
-body.dark .btn-add-member{background:#0cb8d0}
-body.dark .btn-inline-add{background:#0cb8d0}
+body.dark .btn-cta{background:#0cb8d0;color:#0f1422}
+body.dark .btn-add-member{background:#0cb8d0;color:#0f1422}
+body.dark .btn-inline-add{background:#0cb8d0;color:#0f1422}
 body.dark .rv-btn-approve{border-color:#34d399;color:#34d399}
 body.dark .rv-btn-approve:hover{background:rgba(52,211,153,0.10)}
 body.dark .rv-btn-deny{border-color:#f87171;color:#f87171}
@@ -1193,7 +1197,7 @@ body.dark .modal-section-title{color:#8a9bc0}
 body.dark .modal-input{background:#17202f;border-color:rgba(255,255,255,0.10);color:#e2e8f4}
 body.dark .modal-input::placeholder{color:#4a5a75}
 body.dark .modal-input:focus{border-color:#0cb8d0;box-shadow:0 0 0 3px rgba(12,184,208,0.12)}
-body.dark .modal-select{background-color:#17202f;border-color:rgba(255,255,255,0.10);color:#e2e8f4}
+body.dark .modal-select{background-color:#17202f;border-color:rgba(255,255,255,0.10);color:#e2e8f4;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%230cb8d0' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E")}
 body.dark .modal-select:focus{border-color:#0cb8d0;box-shadow:0 0 0 3px rgba(12,184,208,0.12)}
 body.dark .modal-label{color:#8a9bc0}
 body.dark .modal-divider{background:rgba(255,255,255,0.07)}
@@ -1201,7 +1205,7 @@ body.dark .modal-divider{background:rgba(255,255,255,0.07)}
 body.dark #poolSplitRight{scrollbar-width:thin;scrollbar-color:rgba(255,255,255,0.08) transparent}
 body.dark #poolSplitRight::-webkit-scrollbar{width:6px}
 body.dark #poolSplitRight::-webkit-scrollbar-track{background:transparent}
-body.dark #poolSplitRight::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.08);border-radius:3px}
+body.dark #poolSplitRight::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.08);border-radius:2px}
 body.dark .pool-group-lbl{background:#111826;color:#4a5a75;border-bottom-color:rgba(255,255,255,0.12)}
 body.dark .pool-row{border-bottom-color:rgba(255,255,255,0.12)}
 body.dark .pool-row:hover{background:rgba(255,255,255,0.03)}
@@ -1343,10 +1347,10 @@ body.dark .rv-detail-str{color:#c8d4e8}
 body.dark .rv-dur-str{color:#e2e8f4}
 body.dark .rv-submitted-str{color:#8a9bc0}
 body.dark .rv-type-icon{background:rgba(255,255,255,0.06)!important;color:#8a9bc0!important}
-body.dark .rv-type-icon[data-reqtype="annual"]{background:rgba(37,99,235,0.18)!important;color:#7aabff!important}
-body.dark .rv-type-icon[data-reqtype="sick"]{background:rgba(220,38,38,0.18)!important;color:#f87171!important}
-body.dark .rv-type-icon[data-reqtype="wfh"]{background:rgba(5,150,105,0.18)!important;color:#34d399!important}
-body.dark .rv-type-icon[data-reqtype="location"]{background:rgba(59,95,192,0.20)!important;color:#7aabff!important}
+body.dark .rv-type-icon[data-reqtype="annual"]{background:rgba(37,99,235,0.16)!important;color:#60a5fa!important}
+body.dark .rv-type-icon[data-reqtype="sick"]{background:rgba(220,38,38,0.16)!important;color:#f87171!important}
+body.dark .rv-type-icon[data-reqtype="wfh"]{background:rgba(5,150,105,0.16)!important;color:#4ade80!important}
+body.dark .rv-type-icon[data-reqtype="location"]{background:rgba(124,58,237,0.16)!important;color:#c4b5fd!important}
 /* MODAL BACKDROP */
 body.dark .modal-backdrop{background:rgba(0,0,0,0.60)}
 body.dark .modal-backdrop .modal{background:#1d273c;box-shadow:0 24px 60px rgba(0,0,0,0.60)}
@@ -1389,7 +1393,7 @@ body.dark .upcoming-icon-wrap{background:rgba(255,255,255,0.06);color:#8a9bc0}
 body.dark .upcoming-date{color:#e2e8f4}
 body.dark .upcoming-name{color:#8a9bc0}
 body.dark .req-tab{background:#1d273c;border-color:rgba(255,255,255,0.10);color:#8a9bc0}
-body.dark .req-tab.active{background:#0cb8d0;border-color:#0cb8d0;color:#fff}
+body.dark .req-tab.active{background:rgba(12,184,208,0.12);border-color:#0cb8d0;color:#0cb8d0}
 body.dark .req-table-wrap{border-color:rgba(255,255,255,0.07)}
 body.dark .req-table th{background:#111826;color:#4a5a75;border-bottom-color:rgba(255,255,255,0.12)}
 body.dark .req-table td{color:#e2e8f4;border-bottom-color:rgba(255,255,255,0.03)}
@@ -1425,11 +1429,14 @@ body.dark .btn-req-send{background:#17202f;color:#0cb8d0;border-color:#0cb8d0}
 body.dark .btn-req-send:hover{background:#0cb8d0;color:#fff}
 body.dark .hist-table th{background:#111826;color:#4a5a75;border-bottom-color:rgba(255,255,255,0.12)}
 body.dark .hist-table td{color:#e2e8f4;border-bottom-color:rgba(255,255,255,0.03)}
+body.dark .hist-table td:first-child{color:#8a9bc0}
 body.dark .hist-range-picker{background:#1d273c;border-color:rgba(255,255,255,0.10)}
 body.dark .hist-range-picker:focus-within{border-color:#0cb8d0}
 body.dark .hist-range-icon{color:#0cb8d0}
 body.dark .hist-range-sep{color:#4a5a75}
 body.dark .hist-range-input{color:#e2e8f4}
+body.dark .hist-table td.num{color:#4a5a75}
+body.dark .hist-table td.num:last-child{color:#e2e8f4}
 body.dark .hist-table td.pos{color:#34d399}
 body.dark .hist-table td.neg{color:#f87171}
 body.dark .req-success-backdrop{background:rgba(0,5,20,0.65)}
@@ -1446,12 +1453,14 @@ body.dark .ts-select{background:#1d273c;border-color:rgba(255,255,255,0.10);colo
 body.dark .ts-select:focus{border-color:#0cb8d0;box-shadow:0 0 0 3px rgba(12,184,208,0.12)}
 body.dark .ts-btn{background:transparent;border-color:rgba(255,255,255,0.10);color:#8a9bc0}
 body.dark .ts-btn:hover{background:rgba(255,255,255,0.04)}
-body.dark .ts-btn-primary{background:#0cb8d0}
+body.dark .ts-btn-primary{background:#0cb8d0;color:#0f1422}
 body.dark .day-row{border-bottom-color:rgba(255,255,255,0.04)}
 body.dark .day-chip{background:#1d273c}
-body.dark .day-chip.today{background:#0cb8d0}
+body.dark .day-chip.today{background:rgba(12,184,208,0.12);border:1.5px solid #0cb8d0}
 body.dark .day-name{color:#e2e8f4}
-body.dark .day-date{color:#4a5a75}
+body.dark .day-date{color:#8a9bc0}
+body.dark .day-name.today{color:#0cb8d0}
+body.dark .day-date.today{color:rgba(12,184,208,0.75)}
 body.dark .day-hours{color:#e2e8f4}
 body.dark .day-hours.zero{color:#4a5a75}
 body.dark .day-hours.empty{color:#2a3548}
@@ -1472,6 +1481,7 @@ body.dark .fill-modal-note{color:#8a9bc0}
 body.dark .fill-modal-footer{border-top-color:rgba(255,255,255,0.12)}
 body.dark .period-label{color:#e2e8f4}
 body.dark .period-divider{color:#4a5a75}
+body.dark .period-divider::before,body.dark .period-divider::after{background:rgba(255,255,255,0.07)}
 body.dark .period-icon{background:rgba(255,255,255,0.06)}
 body.dark .calc-modal-user{border-bottom-color:rgba(255,255,255,0.12)}
 body.dark .calc-user-avatar{background:#1d273c;color:#8a9bc0}
@@ -1512,7 +1522,7 @@ body.dark .wfh-cell{border-right-color:rgba(255,255,255,0.05);border-bottom-colo
 body.dark .wfh-cell.weekend{background:rgba(255,255,255,0.01)}
 body.dark .wfh-cell.today{background:rgba(12,184,208,0.07)}
 body.dark .wfh-cell-num{color:#8a9bc0}
-body.dark .wfh-cell.today .wfh-cell-num{background:#0cb8d0;color:#fff}
+body.dark .wfh-cell.today .wfh-cell-num{background:rgba(12,184,208,0.12);color:#0cb8d0}
 body.dark .wfh-status-pill.wfh{background:rgba(45,212,191,0.18);color:#2dd4bf}
 body.dark .wfh-status-pill.office{background:rgba(96,165,250,0.18);color:#60a5fa}
 body.dark .wfh-status-pill.away{background:rgba(248,113,113,0.18);color:#f87171}
@@ -1546,10 +1556,11 @@ body.dark #panel-myinfo .card{border-bottom-color:rgba(255,255,255,0.12)}
 body.dark #panel-myinfo .card-title{color:#e2e8f4}
 body.dark .field-label{color:#4a5a75}
 body.dark .field-value{background:#1d273c;border-color:rgba(255,255,255,0.10);color:#e2e8f4}
-body.dark .field-value.readonly-field{background:rgba(255,255,255,0.04);color:#4a5a75}
+body.dark .field-value::placeholder{color:#4a5a75}
+body.dark .field-value.readonly-field{background:rgba(255,255,255,0.04);color:#8a9bc0}
 body.dark .field-value:not(.readonly-field):hover{border-color:rgba(255,255,255,0.20)}
 body.dark .field-value:not(.readonly-field):focus{border-color:#0cb8d0;box-shadow:0 0 0 3px rgba(12,184,208,0.12)}
-body.dark select.field-value{background-color:#1d273c}
+body.dark select.field-value{background-color:#1d273c;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230cb8d0' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 8l9 9 9-9'/%3E%3C%2Fsvg%3E")}
 body.dark .field-note{color:#4a5a75}
 body.dark .save-bar{background:#0cb8d0}
 /* DATEPICKER */
@@ -1597,7 +1608,7 @@ body.dark .dir-select{background-color:#1d273c;border-color:rgba(255,255,255,0.1
 body.dark .dir-select:focus{border-color:#0cb8d0}
 body.dark .dir-count{color:#8a9bc0}
 body.dark .dept-chip{background:#1d273c;border-color:rgba(255,255,255,0.10);color:#8a9bc0}
-body.dark .dept-chip.active{background:#0cb8d0;color:#fff;border-color:#0cb8d0}
+body.dark .dept-chip.active{background:rgba(12,184,208,0.12);color:#0cb8d0;border-color:#0cb8d0}
 body.dark .dept-chip:hover:not(.active){background:rgba(255,255,255,0.05)}
 body.dark .dir-alpha-header{color:#4a5a75;border-bottom-color:rgba(255,255,255,0.12)}
 body.dark .dir-row{border-bottom-color:rgba(255,255,255,0.09)}
@@ -1663,9 +1674,13 @@ body.dark .req-date-cell{color:#8a9bc0}
 body.dark .req-type-icon-lg{background:rgba(255,255,255,0.07)!important}
 body.dark .req-type-icon-lg svg{stroke:currentColor!important}
 body.dark .req-type-btn .req-type-icon-lg{color:#8a9bc0}
+/* req-icon-sm light mode colors (now that SVGs use currentColor) */
+.req-icon-sm[data-reqtype="timeoff"]{color:#1d4ed8}
+.req-icon-sm[data-reqtype="sick"]{color:#da4d43}
+.req-icon-sm[data-reqtype="location"]{color:#7c3aed}
 /* req-icon-sm dark overrides (My Profile) */
 body.dark .req-icon-sm{background:rgba(255,255,255,0.07)!important;color:#8a9bc0!important}
-body.dark .req-icon-sm[data-reqtype="timeoff"]{background:rgba(37,99,235,0.16)!important;color:#7aabff!important}
+body.dark .req-icon-sm[data-reqtype="timeoff"]{background:rgba(37,99,235,0.16)!important;color:#60a5fa!important}
 body.dark .req-icon-sm[data-reqtype="sick"]{background:rgba(220,38,38,0.16)!important;color:#f87171!important}
 body.dark .req-icon-sm[data-reqtype="location"]{background:rgba(124,58,237,0.16)!important;color:#c4b5fd!important}
 /* Inline-style grey colour overrides — catches all hardcoded light-mode text colours */
@@ -1678,7 +1693,14 @@ body.dark [style*="color:#c4cdd8"]{color:#4a5a75!important}
 body.dark [style*="background:#fef3ec"]{background:rgba(251,146,60,0.14)!important}
 body.dark [style*="background:#eef2ff"]{background:rgba(99,102,241,0.14)!important}
 body.dark [style*="background:#dbeafe"]{background:rgba(37,99,235,0.15)!important}
-body.dark .wfh-stat-icon svg{stroke:#7aabff!important}
+.wfh-stat-icon-wfh{background:#c1f0d5}
+.wfh-stat-icon-wfh svg{stroke:#179484}
+.wfh-stat-icon-office{background:#dbeafe}
+.wfh-stat-icon-office svg{stroke:#1d4ed8}
+body.dark .wfh-stat-icon-wfh{background:rgba(23,148,132,0.22)!important}
+body.dark .wfh-stat-icon-wfh svg{stroke:#2dd4bf!important}
+body.dark .wfh-stat-icon-office{background:rgba(37,99,235,0.18)!important}
+body.dark .wfh-stat-icon-office svg{stroke:#60a5fa!important}
 </style>
 </head>
 <body>
@@ -2624,11 +2646,14 @@ body.dark .wfh-stat-icon svg{stroke:#7aabff!important}
   <div id="panel-timesheet" class="ws-panel">
    <div class="content-inner">
     <div class="ts-controls">
-      <select class="ts-select">
-        <option>This Pay Period (Aug 26 – Sep 25)</option>
-        <option>Jul 26 – Aug 25</option>
-        <option>Jun 26 – Jul 25</option>
-      </select>
+      <div class="cust-select" id="ts-period-cs" style="min-width:230px">
+        <div class="cust-select__trigger" onclick="csToggle('ts-period-cs')"><span class="cust-select__value">This Pay Period (Aug 26 – Sep 25)</span><svg class="cust-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9 9 9-9"/></svg></div>
+        <div class="cust-select__panel">
+          <div class="cust-select__option selected" onclick="csPick('ts-period-cs','','This Pay Period (Aug 26 – Sep 25)',null)">This Pay Period (Aug 26 – Sep 25)</div>
+          <div class="cust-select__option" onclick="csPick('ts-period-cs','','Jul 26 – Aug 25',null)">Jul 26 – Aug 25</div>
+          <div class="cust-select__option" onclick="csPick('ts-period-cs','','Jun 26 – Jul 25',null)">Jun 26 – Jul 25</div>
+        </div>
+      </div>
       <div class="ts-spacer"></div>
     </div>
     <div class="timesheet-layout">
@@ -2768,10 +2793,10 @@ body.dark .wfh-stat-icon svg{stroke:#7aabff!important}
         <div class="card-header">
           <span class="card-title">History</span>
           <div class="hist-range-picker">
-            <input type="date" class="hist-range-input" id="histFrom" value="2019-01-01">
+            <input type="date" class="hist-range-input" id="histFrom" value="2019-01-01" onchange="filterHistByDate()">
             <span class="hist-range-sep">–</span>
-            <input type="date" class="hist-range-input" id="histTo" value="2026-08-27">
-            <svg class="hist-range-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            <input type="date" class="hist-range-input" id="histTo" value="2026-08-27" onchange="filterHistByDate()">
+            <svg class="hist-range-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="document.getElementById('histFrom').showPicker()"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
           </div>
         </div>
         <div class="hist-table-wrap">
@@ -2779,101 +2804,101 @@ body.dark .wfh-stat-icon svg{stroke:#7aabff!important}
             <table class="hist-table">
               <thead><tr><th id="histDateSortTh" style="width:130px;cursor:pointer" onclick="toggleHistSort()">Date <span id="histSortArrow">↓</span></th><th>Description</th><th style="text-align:right;width:100px">Used (−)</th><th style="text-align:right;width:110px">Earned (+)</th><th style="text-align:right;width:90px">Balance</th></tr></thead>
               <tbody>
-                <tr><td>22/09/2026</td><td>Annual Leave (Sep 22–23, 2026 · Rosh Hashana)</td><td class="num">—</td><td class="num">—</td><td class="num">8.30</td></tr>
+                <tr><td>22/09/2026</td><td>Company Holiday · Rosh Hashana</td><td class="num">—</td><td class="num">—</td><td class="num">8.30</td></tr>
                 <tr><td>01/08/2026</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.30</td></tr>
-                <tr><td>14/08/2026</td><td>Sick Leave (Aug 14, 2026)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">7.05</td></tr>
+                <tr><td>14/08/2026</td><td>Sick Leave</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">7.05</td></tr>
                 <tr><td>01/07/2026</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.05</td></tr>
-                <tr><td>04/07/2026</td><td>Annual Leave (Jul 4, 2026 · Independence Day)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">6.80</td></tr>
+                <tr><td>04/07/2026</td><td>Annual Leave · Independence Day</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">6.80</td></tr>
                 <tr><td>01/06/2026</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">7.80</td></tr>
-                <tr><td>02/06/2026</td><td>Sick Leave (Jun 2, 2026)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">6.55</td></tr>
-                <tr><td>19/05/2026</td><td>Annual Leave (May 19–23, 2026 · London Roadshow)</td><td class="num neg">−0.00</td><td class="num">—</td><td class="num">7.55</td></tr>
+                <tr><td>02/06/2026</td><td>Sick Leave</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">6.55</td></tr>
+                <tr><td>19/05/2026</td><td>Annual Leave · London Roadshow</td><td class="num neg">−0.00</td><td class="num">—</td><td class="num">7.55</td></tr>
                 <tr><td>01/05/2026</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">7.55</td></tr>
-                <tr><td>14/04/2026</td><td>Annual Leave (Apr 14–17, 2026 · Passover)</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">6.30</td></tr>
+                <tr><td>14/04/2026</td><td>Annual Leave · Passover</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">6.30</td></tr>
                 <tr><td>01/04/2026</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.30</td></tr>
-                <tr><td>03/03/2026</td><td>Sick Leave (Mar 3, 2026)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">9.05</td></tr>
+                <tr><td>03/03/2026</td><td>Sick Leave</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">9.05</td></tr>
                 <tr><td>01/03/2026</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.05</td></tr>
-                <tr><td>16/02/2026</td><td>Annual Leave (Feb 16, 2026 · Presidents Day)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.80</td></tr>
+                <tr><td>16/02/2026</td><td>Annual Leave · Presidents Day</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.80</td></tr>
                 <tr><td>01/02/2026</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.80</td></tr>
                 <tr><td>01/01/2026</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.55</td></tr>
-                <tr><td>31/12/2025</td><td>Year-End (7.25 days carried forward)</td><td class="num neg">−4.95</td><td class="num">—</td><td class="num">7.30</td></tr>
-                <tr><td>25/12/2025</td><td>Annual Leave (Dec 25–26, 2025 · Christmas)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">12.25</td></tr>
+                <tr><td>31/12/2025</td><td>Year-End · 7.25 days carried forward</td><td class="num neg">−4.95</td><td class="num">—</td><td class="num">7.30</td></tr>
+                <tr><td>25/12/2025</td><td>Annual Leave · Christmas</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">12.25</td></tr>
                 <tr><td>01/12/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">14.25</td></tr>
-                <tr><td>18/11/2025</td><td>Sick Leave (Nov 18, 2025)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">13.00</td></tr>
+                <tr><td>18/11/2025</td><td>Sick Leave</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">13.00</td></tr>
                 <tr><td>01/11/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">14.00</td></tr>
                 <tr><td>01/10/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">12.75</td></tr>
                 <tr><td>01/09/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.50</td></tr>
                 <tr><td>01/08/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.25</td></tr>
                 <tr><td>01/07/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.00</td></tr>
-                <tr><td>02/06/2025</td><td>Sick Leave (Jun 2, 2025)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">7.75</td></tr>
+                <tr><td>02/06/2025</td><td>Sick Leave</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">7.75</td></tr>
                 <tr><td>01/06/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.75</td></tr>
                 <tr><td>01/05/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">7.50</td></tr>
-                <tr><td>14/04/2025</td><td>Annual Leave (Apr 14–17, 2025 · Passover)</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">6.25</td></tr>
+                <tr><td>14/04/2025</td><td>Annual Leave · Passover</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">6.25</td></tr>
                 <tr><td>01/04/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.25</td></tr>
-                <tr><td>03/03/2025</td><td>Sick Leave (Mar 3, 2025)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">9.00</td></tr>
+                <tr><td>03/03/2025</td><td>Sick Leave</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">9.00</td></tr>
                 <tr><td>01/03/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.00</td></tr>
-                <tr><td>17/02/2025</td><td>Annual Leave (Feb 17, 2025 · Presidents Day)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
+                <tr><td>17/02/2025</td><td>Annual Leave · Presidents Day</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
                 <tr><td>01/02/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.75</td></tr>
                 <tr><td>01/01/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.50</td></tr>
-                <tr><td>31/12/2024</td><td>Year-End (7.25 days carried forward)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">7.25</td></tr>
-                <tr><td>25/12/2024</td><td>Annual Leave (Dec 25–26, 2024 · Christmas)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">9.25</td></tr>
+                <tr><td>31/12/2024</td><td>Year-End · 7.25 days carried forward</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">7.25</td></tr>
+                <tr><td>25/12/2024</td><td>Annual Leave · Christmas</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">9.25</td></tr>
                 <tr><td>01/12/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.25</td></tr>
-                <tr><td>18/11/2024</td><td>Sick Leave (Nov 18, 2024)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">10.00</td></tr>
+                <tr><td>18/11/2024</td><td>Sick Leave</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">10.00</td></tr>
                 <tr><td>01/11/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.00</td></tr>
                 <tr><td>01/10/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.75</td></tr>
-                <tr><td>03/10/2024</td><td>Annual Leave (Oct 3–4, 2024 · Rosh Hashana)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">8.50</td></tr>
+                <tr><td>03/10/2024</td><td>Company Holiday · Rosh Hashana</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">8.50</td></tr>
                 <tr><td>01/09/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.50</td></tr>
                 <tr><td>01/08/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.25</td></tr>
                 <tr><td>15/07/2024</td><td>Annual Leave (Jul 15–19, 2024)</td><td class="num neg">−5.00</td><td class="num">—</td><td class="num">8.00</td></tr>
                 <tr><td>01/07/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">13.00</td></tr>
                 <tr><td>01/06/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.75</td></tr>
                 <tr><td>01/05/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.50</td></tr>
-                <tr><td>22/04/2024</td><td>Annual Leave (Apr 22–23, 2024 · Passover)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">9.25</td></tr>
+                <tr><td>22/04/2024</td><td>Annual Leave · Passover</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">9.25</td></tr>
                 <tr><td>01/04/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.25</td></tr>
                 <tr><td>01/03/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.00</td></tr>
-                <tr><td>19/02/2024</td><td>Annual Leave (Feb 19, 2024 · Presidents Day)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
+                <tr><td>19/02/2024</td><td>Annual Leave · Presidents Day</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
                 <tr><td>01/02/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.75</td></tr>
                 <tr><td>01/01/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.50</td></tr>
-                <tr><td>31/12/2023</td><td>Year-End (7.25 days carried forward)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">7.25</td></tr>
-                <tr><td>25/12/2023</td><td>Annual Leave (Dec 25–26, 2023 · Christmas)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">8.25</td></tr>
+                <tr><td>31/12/2023</td><td>Year-End · 7.25 days carried forward</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">7.25</td></tr>
+                <tr><td>25/12/2023</td><td>Annual Leave · Christmas</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">8.25</td></tr>
                 <tr><td>01/12/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.25</td></tr>
                 <tr><td>01/11/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.00</td></tr>
                 <tr><td>01/10/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">7.75</td></tr>
-                <tr><td>15/09/2023</td><td>Annual Leave (Sep 15–16, 2023 · Rosh Hashana)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">6.50</td></tr>
+                <tr><td>15/09/2023</td><td>Company Holiday · Rosh Hashana</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">6.50</td></tr>
                 <tr><td>01/09/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.50</td></tr>
                 <tr><td>01/08/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">7.25</td></tr>
                 <tr><td>10/07/2023</td><td>Annual Leave (Jul 10–14, 2023)</td><td class="num neg">−5.00</td><td class="num">—</td><td class="num">6.00</td></tr>
                 <tr><td>01/07/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.00</td></tr>
                 <tr><td>01/06/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.75</td></tr>
                 <tr><td>01/05/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.50</td></tr>
-                <tr><td>06/04/2023</td><td>Annual Leave (Apr 6–7, 2023 · Passover)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">7.25</td></tr>
+                <tr><td>06/04/2023</td><td>Annual Leave · Passover</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">7.25</td></tr>
                 <tr><td>01/04/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.25</td></tr>
-                <tr><td>07/03/2023</td><td>Sick Leave (Mar 7–8, 2023)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">8.00</td></tr>
+                <tr><td>07/03/2023</td><td>Sick Leave</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">8.00</td></tr>
                 <tr><td>01/03/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.00</td></tr>
-                <tr><td>20/02/2023</td><td>Annual Leave (Feb 20, 2023 · Presidents Day)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
+                <tr><td>20/02/2023</td><td>Annual Leave · Presidents Day</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
                 <tr><td>01/02/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.75</td></tr>
                 <tr><td>01/01/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.50</td></tr>
-                <tr><td>31/12/2022</td><td>Year-End (7.25 days carried forward)</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">7.25</td></tr>
+                <tr><td>31/12/2022</td><td>Year-End · 7.25 days carried forward</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">7.25</td></tr>
                 <tr><td>01/12/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.25</td></tr>
                 <tr><td>01/11/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.00</td></tr>
                 <tr><td>01/10/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.75</td></tr>
-                <tr><td>26/09/2022</td><td>Annual Leave (Sep 26–27, 2022 · Rosh Hashana)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">7.50</td></tr>
+                <tr><td>26/09/2022</td><td>Company Holiday · Rosh Hashana</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">7.50</td></tr>
                 <tr><td>01/09/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.50</td></tr>
                 <tr><td>01/08/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.25</td></tr>
                 <tr><td>01/07/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">7.00</td></tr>
                 <tr><td>14/06/2022</td><td>Annual Leave (Jun 14–17, 2022)</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">5.75</td></tr>
                 <tr><td>01/06/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.75</td></tr>
                 <tr><td>01/05/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.50</td></tr>
-                <tr><td>15/04/2022</td><td>Annual Leave (Apr 15–20, 2022 · Passover)</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">7.25</td></tr>
+                <tr><td>15/04/2022</td><td>Annual Leave · Passover</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">7.25</td></tr>
                 <tr><td>01/04/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.25</td></tr>
                 <tr><td>01/03/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.00</td></tr>
-                <tr><td>21/02/2022</td><td>Annual Leave (Feb 21, 2022 · Presidents Day)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
+                <tr><td>21/02/2022</td><td>Annual Leave · Presidents Day</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
                 <tr><td>01/02/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.75</td></tr>
                 <tr><td>01/01/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.50</td></tr>
-                <tr><td>31/12/2021</td><td>Year-End (7.25 days carried forward)</td><td class="num neg">−9.50</td><td class="num">—</td><td class="num">7.25</td></tr>
+                <tr><td>31/12/2021</td><td>Year-End · 7.25 days carried forward</td><td class="num neg">−9.50</td><td class="num">—</td><td class="num">7.25</td></tr>
                 <tr><td>01/12/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">16.75</td></tr>
                 <tr><td>01/11/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">15.50</td></tr>
                 <tr><td>01/10/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">14.25</td></tr>
-                <tr><td>06/09/2021</td><td>Sick Leave (Sep 6, 2021)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">13.00</td></tr>
+                <tr><td>06/09/2021</td><td>Sick Leave</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">13.00</td></tr>
                 <tr><td>01/09/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">14.00</td></tr>
                 <tr><td>01/08/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">12.75</td></tr>
                 <tr><td>26/07/2021</td><td>Annual Leave (Jul 26–30, 2021)</td><td class="num neg">−5.00</td><td class="num">—</td><td class="num">11.50</td></tr>
@@ -2882,10 +2907,10 @@ body.dark .wfh-stat-icon svg{stroke:#7aabff!important}
                 <tr><td>01/05/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">14.00</td></tr>
                 <tr><td>01/04/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">12.75</td></tr>
                 <tr><td>01/03/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.50</td></tr>
-                <tr><td>15/02/2021</td><td>Annual Leave (Feb 15, 2021 · Presidents Day)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">10.25</td></tr>
+                <tr><td>15/02/2021</td><td>Annual Leave · Presidents Day</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">10.25</td></tr>
                 <tr><td>01/02/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.25</td></tr>
                 <tr><td>01/01/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.00</td></tr>
-                <tr><td>31/12/2020</td><td>Year-End (8.75 days carried forward)</td><td class="num neg">−7.50</td><td class="num">—</td><td class="num">8.75</td></tr>
+                <tr><td>31/12/2020</td><td>Year-End · 8.75 days carried forward</td><td class="num neg">−7.50</td><td class="num">—</td><td class="num">8.75</td></tr>
                 <tr><td>01/12/2020</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">16.25</td></tr>
                 <tr><td>01/11/2020</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">15.00</td></tr>
                 <tr><td>01/10/2020</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">13.75</td></tr>
@@ -2897,10 +2922,10 @@ body.dark .wfh-stat-icon svg{stroke:#7aabff!important}
                 <tr><td>01/05/2020</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">12.50</td></tr>
                 <tr><td>01/04/2020</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.25</td></tr>
                 <tr><td>01/03/2020</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.00</td></tr>
-                <tr><td>17/02/2020</td><td>Annual Leave (Feb 17, 2020 · Presidents Day)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
+                <tr><td>17/02/2020</td><td>Annual Leave · Presidents Day</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
                 <tr><td>01/02/2020</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.75</td></tr>
                 <tr><td>01/01/2020</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.50</td></tr>
-                <tr><td>31/12/2019</td><td>Year-End (7.25 days carried forward)</td><td class="num">—</td><td class="num">—</td><td class="num">7.25</td></tr>
+                <tr><td>31/12/2019</td><td>Year-End · 7.25 days carried forward</td><td class="num">—</td><td class="num">—</td><td class="num">7.25</td></tr>
                 <tr><td>26/12/2019</td><td>Annual Leave (Dec 26–27, 2019)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">7.25</td></tr>
                 <tr><td>01/12/2019</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.25</td></tr>
                 <tr><td>01/11/2019</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.00</td></tr>
@@ -2916,7 +2941,7 @@ body.dark .wfh-stat-icon svg{stroke:#7aabff!important}
               </tbody>
                 <tr><td>01/01/2020</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.50</td></tr>
                 <tr><td>01/02/2020</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.75</td></tr>
-                <tr><td>17/02/2020</td><td>Annual Leave (Feb 17, 2020 · Presidents Day)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
+                <tr><td>17/02/2020</td><td>Annual Leave · Presidents Day</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
                 <tr><td>01/03/2020</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.00</td></tr>
                 <tr><td>01/04/2020</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.25</td></tr>
                 <tr><td>01/05/2020</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">12.50</td></tr>
@@ -2928,10 +2953,10 @@ body.dark .wfh-stat-icon svg{stroke:#7aabff!important}
                 <tr><td>01/10/2020</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">13.75</td></tr>
                 <tr><td>01/11/2020</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">15.00</td></tr>
                 <tr><td>01/12/2020</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">16.25</td></tr>
-                <tr><td>31/12/2020</td><td>Year-End (8.75 days carried forward)</td><td class="num neg">−7.50</td><td class="num">—</td><td class="num">8.75</td></tr>
+                <tr><td>31/12/2020</td><td>Year-End · 8.75 days carried forward</td><td class="num neg">−7.50</td><td class="num">—</td><td class="num">8.75</td></tr>
                 <tr><td>01/01/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.00</td></tr>
                 <tr><td>01/02/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.25</td></tr>
-                <tr><td>15/02/2021</td><td>Annual Leave (Feb 15, 2021 · Presidents Day)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">10.25</td></tr>
+                <tr><td>15/02/2021</td><td>Annual Leave · Presidents Day</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">10.25</td></tr>
                 <tr><td>01/03/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.50</td></tr>
                 <tr><td>01/04/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">12.75</td></tr>
                 <tr><td>01/05/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">14.00</td></tr>
@@ -2940,101 +2965,101 @@ body.dark .wfh-stat-icon svg{stroke:#7aabff!important}
                 <tr><td>26/07/2021</td><td>Annual Leave (Jul 26–30, 2021)</td><td class="num neg">−5.00</td><td class="num">—</td><td class="num">11.50</td></tr>
                 <tr><td>01/08/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">12.75</td></tr>
                 <tr><td>01/09/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">14.00</td></tr>
-                <tr><td>06/09/2021</td><td>Sick Leave (Sep 6, 2021)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">13.00</td></tr>
+                <tr><td>06/09/2021</td><td>Sick Leave</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">13.00</td></tr>
                 <tr><td>01/10/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">14.25</td></tr>
                 <tr><td>01/11/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">15.50</td></tr>
                 <tr><td>01/12/2021</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">16.75</td></tr>
-                <tr><td>31/12/2021</td><td>Year-End (7.25 days carried forward)</td><td class="num neg">−9.50</td><td class="num">—</td><td class="num">7.25</td></tr>
+                <tr><td>31/12/2021</td><td>Year-End · 7.25 days carried forward</td><td class="num neg">−9.50</td><td class="num">—</td><td class="num">7.25</td></tr>
                 <tr><td>01/01/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.50</td></tr>
                 <tr><td>01/02/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.75</td></tr>
-                <tr><td>21/02/2022</td><td>Annual Leave (Feb 21, 2022 · Presidents Day)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
+                <tr><td>21/02/2022</td><td>Annual Leave · Presidents Day</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
                 <tr><td>01/03/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.00</td></tr>
                 <tr><td>01/04/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.25</td></tr>
-                <tr><td>15/04/2022</td><td>Annual Leave (Apr 15–20, 2022 · Passover)</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">7.25</td></tr>
+                <tr><td>15/04/2022</td><td>Annual Leave · Passover</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">7.25</td></tr>
                 <tr><td>01/05/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.50</td></tr>
                 <tr><td>01/06/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.75</td></tr>
                 <tr><td>14/06/2022</td><td>Annual Leave (Jun 14–17, 2022)</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">5.75</td></tr>
                 <tr><td>01/07/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">7.00</td></tr>
                 <tr><td>01/08/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.25</td></tr>
                 <tr><td>01/09/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.50</td></tr>
-                <tr><td>26/09/2022</td><td>Annual Leave (Sep 26–27, 2022 · Rosh Hashana)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">7.50</td></tr>
+                <tr><td>26/09/2022</td><td>Company Holiday · Rosh Hashana</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">7.50</td></tr>
                 <tr><td>01/10/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.75</td></tr>
                 <tr><td>01/11/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.00</td></tr>
                 <tr><td>01/12/2022</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.25</td></tr>
-                <tr><td>31/12/2022</td><td>Year-End (7.25 days carried forward)</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">7.25</td></tr>
+                <tr><td>31/12/2022</td><td>Year-End · 7.25 days carried forward</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">7.25</td></tr>
                 <tr><td>01/01/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.50</td></tr>
                 <tr><td>01/02/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.75</td></tr>
-                <tr><td>20/02/2023</td><td>Annual Leave (Feb 20, 2023 · Presidents Day)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
+                <tr><td>20/02/2023</td><td>Annual Leave · Presidents Day</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
                 <tr><td>01/03/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.00</td></tr>
-                <tr><td>07/03/2023</td><td>Sick Leave (Mar 7–8, 2023)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">8.00</td></tr>
+                <tr><td>07/03/2023</td><td>Sick Leave</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">8.00</td></tr>
                 <tr><td>01/04/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.25</td></tr>
-                <tr><td>06/04/2023</td><td>Annual Leave (Apr 6–7, 2023 · Passover)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">7.25</td></tr>
+                <tr><td>06/04/2023</td><td>Annual Leave · Passover</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">7.25</td></tr>
                 <tr><td>01/05/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.50</td></tr>
                 <tr><td>01/06/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.75</td></tr>
                 <tr><td>01/07/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.00</td></tr>
                 <tr><td>10/07/2023</td><td>Annual Leave (Jul 10–14, 2023)</td><td class="num neg">−5.00</td><td class="num">—</td><td class="num">6.00</td></tr>
                 <tr><td>01/08/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">7.25</td></tr>
                 <tr><td>01/09/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.50</td></tr>
-                <tr><td>15/09/2023</td><td>Annual Leave (Sep 15–16, 2023 · Rosh Hashana)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">6.50</td></tr>
+                <tr><td>15/09/2023</td><td>Company Holiday · Rosh Hashana</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">6.50</td></tr>
                 <tr><td>01/10/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">7.75</td></tr>
                 <tr><td>01/11/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.00</td></tr>
                 <tr><td>01/12/2023</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.25</td></tr>
-                <tr><td>25/12/2023</td><td>Annual Leave (Dec 25–26, 2023 · Christmas)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">8.25</td></tr>
-                <tr><td>31/12/2023</td><td>Year-End (7.25 days carried forward)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">7.25</td></tr>
+                <tr><td>25/12/2023</td><td>Annual Leave · Christmas</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">8.25</td></tr>
+                <tr><td>31/12/2023</td><td>Year-End · 7.25 days carried forward</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">7.25</td></tr>
                 <tr><td>01/01/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.50</td></tr>
                 <tr><td>01/02/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.75</td></tr>
-                <tr><td>19/02/2024</td><td>Annual Leave (Feb 19, 2024 · Presidents Day)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
+                <tr><td>19/02/2024</td><td>Annual Leave · Presidents Day</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
                 <tr><td>01/03/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.00</td></tr>
                 <tr><td>01/04/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.25</td></tr>
-                <tr><td>22/04/2024</td><td>Annual Leave (Apr 22–23, 2024 · Passover)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">9.25</td></tr>
+                <tr><td>22/04/2024</td><td>Annual Leave · Passover</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">9.25</td></tr>
                 <tr><td>01/05/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.50</td></tr>
                 <tr><td>01/06/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.75</td></tr>
                 <tr><td>01/07/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">13.00</td></tr>
                 <tr><td>15/07/2024</td><td>Annual Leave (Jul 15–19, 2024)</td><td class="num neg">−5.00</td><td class="num">—</td><td class="num">8.00</td></tr>
                 <tr><td>01/08/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.25</td></tr>
                 <tr><td>01/09/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.50</td></tr>
-                <tr><td>03/10/2024</td><td>Annual Leave (Oct 3–4, 2024 · Rosh Hashana)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">8.50</td></tr>
+                <tr><td>03/10/2024</td><td>Company Holiday · Rosh Hashana</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">8.50</td></tr>
                 <tr><td>01/10/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.75</td></tr>
                 <tr><td>01/11/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.00</td></tr>
-                <tr><td>18/11/2024</td><td>Sick Leave (Nov 18, 2024)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">10.00</td></tr>
+                <tr><td>18/11/2024</td><td>Sick Leave</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">10.00</td></tr>
                 <tr><td>01/12/2024</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.25</td></tr>
-                <tr><td>25/12/2024</td><td>Annual Leave (Dec 25–26, 2024 · Christmas)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">9.25</td></tr>
-                <tr><td>31/12/2024</td><td>Year-End (7.25 days carried forward)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">7.25</td></tr>
+                <tr><td>25/12/2024</td><td>Annual Leave · Christmas</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">9.25</td></tr>
+                <tr><td>31/12/2024</td><td>Year-End · 7.25 days carried forward</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">7.25</td></tr>
                 <tr><td>01/01/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.50</td></tr>
                 <tr><td>01/02/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.75</td></tr>
-                <tr><td>17/02/2025</td><td>Annual Leave (Feb 17, 2025 · Presidents Day)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
+                <tr><td>17/02/2025</td><td>Annual Leave · Presidents Day</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.75</td></tr>
                 <tr><td>01/03/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.00</td></tr>
-                <tr><td>03/03/2025</td><td>Sick Leave (Mar 3, 2025)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">9.00</td></tr>
+                <tr><td>03/03/2025</td><td>Sick Leave</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">9.00</td></tr>
                 <tr><td>01/04/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.25</td></tr>
-                <tr><td>14/04/2025</td><td>Annual Leave (Apr 14–17, 2025 · Passover)</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">6.25</td></tr>
+                <tr><td>14/04/2025</td><td>Annual Leave · Passover</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">6.25</td></tr>
                 <tr><td>01/05/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">7.50</td></tr>
                 <tr><td>01/06/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.75</td></tr>
-                <tr><td>02/06/2025</td><td>Sick Leave (Jun 2, 2025)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">7.75</td></tr>
+                <tr><td>02/06/2025</td><td>Sick Leave</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">7.75</td></tr>
                 <tr><td>01/07/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.00</td></tr>
                 <tr><td>01/08/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.25</td></tr>
                 <tr><td>01/09/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">11.50</td></tr>
                 <tr><td>01/10/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">12.75</td></tr>
                 <tr><td>01/11/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">14.00</td></tr>
-                <tr><td>18/11/2025</td><td>Sick Leave (Nov 18, 2025)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">13.00</td></tr>
+                <tr><td>18/11/2025</td><td>Sick Leave</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">13.00</td></tr>
                 <tr><td>01/12/2025</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">14.25</td></tr>
-                <tr><td>25/12/2025</td><td>Annual Leave (Dec 25–26, 2025 · Christmas)</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">12.25</td></tr>
-                <tr><td>31/12/2025</td><td>Year-End (7.25 days carried forward)</td><td class="num neg">−4.95</td><td class="num">—</td><td class="num">7.30</td></tr>
+                <tr><td>25/12/2025</td><td>Annual Leave · Christmas</td><td class="num neg">−2.00</td><td class="num">—</td><td class="num">12.25</td></tr>
+                <tr><td>31/12/2025</td><td>Year-End · 7.25 days carried forward</td><td class="num neg">−4.95</td><td class="num">—</td><td class="num">7.30</td></tr>
                 <tr><td>01/01/2026</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.55</td></tr>
                 <tr><td>01/02/2026</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">9.80</td></tr>
-                <tr><td>16/02/2026</td><td>Annual Leave (Feb 16, 2026 · Presidents Day)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.80</td></tr>
+                <tr><td>16/02/2026</td><td>Annual Leave · Presidents Day</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">8.80</td></tr>
                 <tr><td>01/03/2026</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.05</td></tr>
-                <tr><td>03/03/2026</td><td>Sick Leave (Mar 3, 2026)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">9.05</td></tr>
+                <tr><td>03/03/2026</td><td>Sick Leave</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">9.05</td></tr>
                 <tr><td>01/04/2026</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">10.30</td></tr>
-                <tr><td>14/04/2026</td><td>Annual Leave (Apr 14–17, 2026 · Passover)</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">6.30</td></tr>
+                <tr><td>14/04/2026</td><td>Annual Leave · Passover</td><td class="num neg">−4.00</td><td class="num">—</td><td class="num">6.30</td></tr>
                 <tr><td>01/05/2026</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">7.55</td></tr>
-                <tr><td>19/05/2026</td><td>Annual Leave (May 19–23, 2026 · London Roadshow)</td><td class="num neg">−0.00</td><td class="num">—</td><td class="num">7.55</td></tr>
-                <tr><td>02/06/2026</td><td>Sick Leave (Jun 2, 2026)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">6.55</td></tr>
+                <tr><td>19/05/2026</td><td>Annual Leave · London Roadshow</td><td class="num neg">−0.00</td><td class="num">—</td><td class="num">7.55</td></tr>
+                <tr><td>02/06/2026</td><td>Sick Leave</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">6.55</td></tr>
                 <tr><td>01/06/2026</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">7.80</td></tr>
-                <tr><td>04/07/2026</td><td>Annual Leave (Jul 4, 2026 · Independence Day)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">6.80</td></tr>
+                <tr><td>04/07/2026</td><td>Annual Leave · Independence Day</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">6.80</td></tr>
                 <tr><td>01/07/2026</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.05</td></tr>
-                <tr><td>14/08/2026</td><td>Sick Leave (Aug 14, 2026)</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">7.05</td></tr>
+                <tr><td>14/08/2026</td><td>Sick Leave</td><td class="num neg">−1.00</td><td class="num">—</td><td class="num">7.05</td></tr>
                 <tr><td>01/08/2026</td><td>Monthly accrual</td><td class="num">—</td><td class="num pos">+1.25</td><td class="num">8.30</td></tr>
-                <tr><td>22/09/2026</td><td>Annual Leave (Sep 22–23, 2026 · Rosh Hashana)</td><td class="num">—</td><td class="num">—</td><td class="num">8.30</td></tr>
+                <tr><td>22/09/2026</td><td>Company Holiday · Rosh Hashana</td><td class="num">—</td><td class="num">—</td><td class="num">8.30</td></tr>
               </tbody>
             </table>
            </div>
@@ -4776,8 +4801,8 @@ function renderWFH(){
   else if(eff==='office')officeDays++;
  }
  document.getElementById('wfhSummary').innerHTML=`
-  <div class="wfh-stat-card"><div class="wfh-stat-icon" style="background:#c1f0d5"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#179484" stroke-width="2" stroke-linecap="round"><path d="M3 12l9-9 9 9"/><path d="M9 21V12h6v9"/></svg></div><div><div class="wfh-stat-num">${wfhDays}</div><div class="wfh-stat-label">WFH Days</div></div></div>
-  <div class="wfh-stat-card"><div class="wfh-stat-icon" style="background:#dbeafe"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div><div><div class="wfh-stat-num">${officeDays}</div><div class="wfh-stat-label">In Office</div></div></div>`;
+  <div class="wfh-stat-card"><div class="wfh-stat-icon wfh-stat-icon-wfh"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 12l9-9 9 9"/><path d="M9 21V12h6v9"/></svg></div><div><div class="wfh-stat-num">${wfhDays}</div><div class="wfh-stat-label">WFH Days</div></div></div>
+  <div class="wfh-stat-card"><div class="wfh-stat-icon wfh-stat-icon-office"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div><div><div class="wfh-stat-num">${officeDays}</div><div class="wfh-stat-label">In Office</div></div></div>`;
  let cells='';
  for(let i=startDow-1;i>=0;i--)cells+=`<div class="wfh-cell faded"><div class="wfh-cell-num">${prevDays-i}</div></div>`;
  for(let d=1;d<=daysInMonth;d++){
@@ -4829,9 +4854,9 @@ function saveWFH(){
 
 /* ── REQUESTS ──────────────────────────────────── */
 const REQ_ICONS={
- timeoff:`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`,
- sick:`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#da4d43" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`,
- location:`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
+ timeoff:`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`,
+ sick:`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`,
+ location:`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
 };
 let _reqFilter='all';
 function filterRequests(f,el){
@@ -4851,6 +4876,19 @@ function toggleHistSort(){
   rows.reverse();
   rows.forEach(r=>tbody.appendChild(r));
 }
+function filterHistByDate(){
+  const from=document.getElementById('histFrom').value;
+  const to=document.getElementById('histTo').value;
+  const tbody=document.querySelector('table.hist-table tbody');
+  if(!tbody)return;
+  tbody.querySelectorAll('tr').forEach(tr=>{
+    const txt=(tr.cells[0]||{}).textContent||'';
+    const p=txt.trim().split('/');
+    if(p.length!==3){tr.style.display='';return;}
+    const d=`${p[2]}-${p[1]}-${p[0]}`;
+    tr.style.display=((!from||d>=from)&&(!to||d<=to))?'':'none';
+  });
+}
 
 function renderRequests(f){
  const list=f==='all'?REQUESTS:REQUESTS.filter(r=>r.status===f);
@@ -4858,18 +4896,21 @@ function renderRequests(f){
  if(!list.length){el.innerHTML='<div class="req-empty">No requests found</div>';return;}
  el.innerHTML=`<div class="req-table-scroll"><table class="req-table">
   <thead><tr>
-   <th style="width:220px">Type</th>
+   <th style="width:300px">Type</th>
+   <th style="width:220px">Date</th>
    <th>Details</th>
-   <th style="width:120px;text-align:right">Submitted</th>
    <th style="width:110px;text-align:right">Status</th>
   </tr></thead>
-  <tbody>${list.map(r=>`
-  <tr>
+  <tbody>${list.map(r=>{
+   const parts=r.sub.split(' · ');
+   const dates=r.type==='location'&&parts.length>=2?parts[1]:parts[0];
+   const detail=r.type==='location'&&parts.length>=2?parts[0]+(parts.length>2?' · '+parts.slice(2).join(' · '):''):parts.slice(1).join(' · ');
+   return`<tr>
    <td><div style="display:flex;align-items:center;gap:10px"><div class="req-icon-sm" data-reqtype="${r.type}" style="background:${REQ_BG[r.type]||'#f5f5f8'}">${REQ_ICONS[r.type]||REQ_ICONS.timeoff}</div><span style="font-weight:400;white-space:nowrap">${r.title}</span></div></td>
-   <td class="req-sub-cell">${r.sub}</td>
-   <td class="req-date-cell" style="text-align:right">${r.date}</td>
+   <td style="white-space:nowrap">${dates}</td>
+   <td class="req-sub-cell">${detail}</td>
    <td style="text-align:right"><span class="req-status ${r.status}">${r.status.charAt(0).toUpperCase()+r.status.slice(1)}</span></td>
-  </tr>`).join('')}
+  </tr>`;}).join('')}
   </tbody></table></div>`;
 }
 let _reqType='timeoff';
@@ -5604,6 +5645,7 @@ function toggleDarkMode(){
   const sw=document.getElementById('dmSwitch');
   if(sw)sw.classList.toggle('on',on);
   localStorage.setItem('makor-dm',on?'1':'0');
+  if(document.getElementById('wfhSummary'))calcStats();
 }
 function toggleProfileDrop(){
   document.getElementById('profileDrop').classList.toggle('open');
