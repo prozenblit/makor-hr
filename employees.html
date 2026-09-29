@@ -409,7 +409,9 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .modal-input,.modal-select{width:100%;height:40px;border:1px solid #e5e7ec;border-radius:4px;background:#fff;padding:0 12px;font-size:14px;color:#1a1a1a;outline:none;font-family:inherit;transition:border-color 0.12s,box-shadow 0.12s}
 .modal-input::placeholder{color:#a8b6cd}
 .modal-input:focus,.modal-select:focus{border-color:#005268;box-shadow:0 0 0 3px rgba(0,82,104,0.12)}
-.modal-input::-webkit-calendar-picker-indicator{display:none}
+.modal-input[type="date"]::-webkit-calendar-picker-indicator{opacity:0.38;cursor:pointer;width:16px;height:16px}
+.modal-input[type="date"]::-webkit-calendar-picker-indicator:hover{opacity:0.65}
+.modal-input[type="date"].dt-empty::-webkit-datetime-edit{color:#a8b6cd}
 .modal-field .cust-select{display:block;width:100%}.modal-field .cust-select__trigger{width:100%;box-sizing:border-box}.modal-field .cust-select__panel{min-width:100%;box-sizing:border-box}
 .modal-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23005268' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;cursor:pointer}
 .modal-divider{height:1px;background:#e5e7ec;margin:4px 0 24px}
@@ -1197,6 +1199,9 @@ body.dark .modal-footer{border-top-color:rgba(255,255,255,0.12)}
 body.dark .modal-section-title{color:#8a9bc0}
 body.dark .modal-input{background:transparent;border-color:rgba(255,255,255,0.10);color:#e2e8f4}
 body.dark .modal-input::placeholder{color:#4a5a75}
+body.dark .modal-input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(1);opacity:0.30}
+body.dark .modal-input[type="date"]::-webkit-calendar-picker-indicator:hover{opacity:0.55}
+body.dark .modal-input[type="date"].dt-empty::-webkit-datetime-edit{color:#4a5a75}
 body.dark .modal-input:focus{border-color:#0cb8d0;box-shadow:0 0 0 3px rgba(12,184,208,0.12)}
 body.dark .modal-select{background-color:transparent;border-color:rgba(255,255,255,0.10);color:#e2e8f4;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%230cb8d0' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E")}
 body.dark .modal-select:focus{border-color:#0cb8d0;box-shadow:0 0 0 3px rgba(12,184,208,0.12)}
@@ -3708,6 +3713,7 @@ function navTo(name){
 renderTable(EMP);
 
 /* ── NEW EMPLOYEE MODAL ───────────────────────────────────────────── */
+function initDateInput(el){el.classList.toggle('dt-empty',!el.value);el.addEventListener('change',function(){el.classList.toggle('dt-empty',!el.value);});}
 function openEmpModal(){
  // Populate Reports To from EMP
  const rtEl=document.getElementById('ne-rt');
@@ -3719,6 +3725,7 @@ function openEmpModal(){
  rtEl.querySelector('.cust-select__trigger').classList.remove('has-value');
  document.getElementById('empModal').classList.add('open');
  document.body.style.overflow='hidden';
+ document.querySelectorAll('#empModal .modal-input[type="date"]').forEach(initDateInput);
  document.getElementById('ne-first').focus();
 }
 function closeEmpModal(){
@@ -3752,6 +3759,7 @@ function submitEmpModal(){
  closeEmpModal();
  // Clear form
  ['ne-first','ne-last','ne-dob','ne-email','ne-mobile','ne-phone','ne-role','ne-co'].forEach(id=>document.getElementById(id).value='');
+ document.querySelectorAll('#empModal .modal-input[type="date"]').forEach(el=>el.classList.add('dt-empty'));
  ['ne-gender','ne-dept','ne-office','ne-rt'].forEach(id=>{const el=document.getElementById(id);if(!el)return;el.dataset.val='';el.querySelector('.cust-select__value').textContent='Select…';el.querySelector('.cust-select__trigger').classList.remove('has-value');el.querySelectorAll('.cust-select__option').forEach((o,i)=>o.classList.toggle('selected',i===0));});
  const nsEl=document.getElementById('ne-status');if(nsEl){nsEl.dataset.val='active';nsEl.querySelector('.cust-select__value').textContent='Active';nsEl.querySelector('.cust-select__trigger').classList.add('has-value');nsEl.querySelectorAll('.cust-select__option').forEach((o,i)=>o.classList.toggle('selected',i===0));}
 }
