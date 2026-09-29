@@ -646,6 +646,7 @@ select.field-value{cursor:pointer;background-image:url("data:image/svg+xml,%3Csv
 .datepicker-wrap{position:relative;width:100%}
 .datepicker-input-wrap{position:relative;display:flex;align-items:center}
 .datepicker-input{width:100%;height:40px;border:1px solid #e5e7ec;border-radius:4px;padding:0 36px 0 12px;font-size:14px;font-family:inherit;color:#1a1a1a;background:#fff;outline:none;cursor:pointer;transition:border-color 0.15s,box-shadow 0.15s;caret-color:transparent}
+.datepicker-input::placeholder{color:#a8b6cd}
 .datepicker-input:hover{border-color:#a8b6cd}
 .datepicker-input:focus{border-color:#005268;box-shadow:0 0 0 3px rgba(0,82,104,0.12)}
 .datepicker-input::-webkit-calendar-picker-indicator{display:none}
@@ -1571,6 +1572,7 @@ body.dark .field-note{color:#4a5a75}
 body.dark .save-bar{background:#0cb8d0}
 /* DATEPICKER */
 body.dark .datepicker-input{background:transparent;border-color:rgba(255,255,255,0.10);color:#e2e8f4}
+body.dark .datepicker-input::placeholder{color:#4a5a75}
 body.dark .datepicker-input:hover{border-color:rgba(255,255,255,0.20)}
 body.dark .datepicker-input:focus{border-color:#0cb8d0;box-shadow:0 0 0 3px rgba(12,184,208,0.12)}
 body.dark .datepicker-icon{color:#8a9bc0}
@@ -3372,7 +3374,17 @@ body.dark .wfh-stat-icon-office svg{stroke:#60a5fa!important}
      </div>
      <div class="modal-field">
       <label class="modal-label">Date of Birth</label>
-      <input class="modal-input" type="date" id="ne-dob">
+      <div class="datepicker-wrap" id="nedpWrap-dob">
+       <div class="datepicker-input-wrap">
+        <input type="text" class="datepicker-input" id="nedp-dob" placeholder="dd/mm/yyyy" readonly onclick="nedpToggle('dob')">
+        <span class="datepicker-icon" onclick="nedpToggle('dob')" style="cursor:pointer;pointer-events:auto"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+       </div>
+       <div class="datepicker-cal" id="nedpCal-dob">
+        <div class="dp-header"><button class="dp-nav" onclick="nedpPrev(event,'dob')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button><span class="dp-month-label" id="nedpLabel-dob" onclick="nedpToggleYear(event,'dob')"></span><button class="dp-nav" onclick="nedpNext(event,'dob')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button></div>
+        <div id="nedpDayView-dob"><div class="dp-weekdays"><div class="dp-wd">Su</div><div class="dp-wd">Mo</div><div class="dp-wd">Tu</div><div class="dp-wd">We</div><div class="dp-wd">Th</div><div class="dp-wd">Fr</div><div class="dp-wd">Sa</div></div><div class="dp-days" id="nedpDays-dob"></div></div>
+        <div id="nedpYearView-dob" style="display:none"><div class="dp-year-grid" id="nedpYearGrid-dob"></div></div>
+       </div>
+      </div>
      </div>
     </div>
    </div>
@@ -3435,7 +3447,17 @@ body.dark .wfh-stat-icon-office svg{stroke:#60a5fa!important}
      </div>
      <div class="modal-field">
       <label class="modal-label">Hire Date</label>
-      <input class="modal-input" type="date" id="ne-hire">
+      <div class="datepicker-wrap" id="nedpWrap-hire">
+       <div class="datepicker-input-wrap">
+        <input type="text" class="datepicker-input" id="nedp-hire" placeholder="dd/mm/yyyy" readonly onclick="nedpToggle('hire')">
+        <span class="datepicker-icon" onclick="nedpToggle('hire')" style="cursor:pointer;pointer-events:auto"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+       </div>
+       <div class="datepicker-cal" id="nedpCal-hire">
+        <div class="dp-header"><button class="dp-nav" onclick="nedpPrev(event,'hire')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button><span class="dp-month-label" id="nedpLabel-hire" onclick="nedpToggleYear(event,'hire')"></span><button class="dp-nav" onclick="nedpNext(event,'hire')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button></div>
+        <div id="nedpDayView-hire"><div class="dp-weekdays"><div class="dp-wd">Su</div><div class="dp-wd">Mo</div><div class="dp-wd">Tu</div><div class="dp-wd">We</div><div class="dp-wd">Th</div><div class="dp-wd">Fr</div><div class="dp-wd">Sa</div></div><div class="dp-days" id="nedpDays-hire"></div></div>
+        <div id="nedpYearView-hire" style="display:none"><div class="dp-year-grid" id="nedpYearGrid-hire"></div></div>
+       </div>
+      </div>
      </div>
      <div class="modal-field">
       <label class="modal-label">Status</label>
@@ -3725,7 +3747,6 @@ function openEmpModal(){
  rtEl.querySelector('.cust-select__trigger').classList.remove('has-value');
  document.getElementById('empModal').classList.add('open');
  document.body.style.overflow='hidden';
- document.querySelectorAll('#empModal .modal-input[type="date"]').forEach(initDateInput);
  document.getElementById('ne-first').focus();
 }
 function closeEmpModal(){
@@ -3742,15 +3763,15 @@ function submitEmpModal(){
  const initials=(first[0]+(last[0]||'')).toUpperCase();
  const dept=csGetVal('ne-dept')||'Operations';
  const office=csGetVal('ne-office')||'New York';
- const hire=document.getElementById('ne-hire').value
-   ? new Date(document.getElementById('ne-hire').value).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})
+ const hire=nedpState.hire.date
+   ? nedpState.hire.date.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})
    : new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
  const newEmp={
   name,initials,
   role:document.getElementById('ne-role').value.trim()||'—',
   dept,office,hire,
   status:csGetVal('ne-status')||'active',
-  birthday:document.getElementById('ne-dob').value?new Date(document.getElementById('ne-dob').value).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'',
+  birthday:nedpState.dob.date?nedpState.dob.date.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'',
   reportsTo:csGetVal('ne-rt'),
   _email:email,_mobile:document.getElementById('ne-mobile').value.trim(),_co:document.getElementById('ne-co').value.trim()
  };
@@ -3758,8 +3779,9 @@ function submitEmpModal(){
  renderTable(filtered());
  closeEmpModal();
  // Clear form
- ['ne-first','ne-last','ne-dob','ne-email','ne-mobile','ne-phone','ne-role','ne-co'].forEach(id=>document.getElementById(id).value='');
- document.querySelectorAll('#empModal .modal-input[type="date"]').forEach(el=>el.classList.add('dt-empty'));
+ ['ne-first','ne-last','ne-email','ne-mobile','ne-phone','ne-role','ne-co'].forEach(id=>document.getElementById(id).value='');
+ nedpState.dob.date=null; nedpState.hire.date=null;
+ ['nedp-dob','nedp-hire'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
  ['ne-gender','ne-dept','ne-office','ne-rt'].forEach(id=>{const el=document.getElementById(id);if(!el)return;el.dataset.val='';el.querySelector('.cust-select__value').textContent='Select…';el.querySelector('.cust-select__trigger').classList.remove('has-value');el.querySelectorAll('.cust-select__option').forEach((o,i)=>o.classList.toggle('selected',i===0));});
  const nsEl=document.getElementById('ne-status');if(nsEl){nsEl.dataset.val='active';nsEl.querySelector('.cust-select__value').textContent='Active';nsEl.querySelector('.cust-select__trigger').classList.add('has-value');nsEl.querySelectorAll('.cust-select__option').forEach((o,i)=>o.classList.toggle('selected',i===0));}
 }
@@ -5408,7 +5430,19 @@ function dpRender() {
 document.addEventListener('click', function(e) {
   const wrap = document.getElementById('dpWrap');
   if (wrap && !wrap.contains(e.target)) dpClose();
+  if (!e.target.closest('.datepicker-wrap')) { nedpClose('dob'); nedpClose('hire'); }
 });
+
+/* ── NEW EMPLOYEE DATEPICKERS (dob / hire) ─────────────── */
+const nedpState={dob:{date:null,view:new Date(1990,0,1),yearMode:false},hire:{date:null,view:new Date(),yearMode:false}};
+function nedpToggle(f){const cal=document.getElementById('nedpCal-'+f);if(!cal)return;if(cal.classList.contains('open')){nedpClose(f);return;}nedpClose('dob');nedpClose('hire');nedpState[f].yearMode=false;nedpRender(f);const mb=cal.closest('.modal-body');if(mb)mb.style.overflowY='visible';cal.classList.add('open');}
+function nedpClose(f){const cal=document.getElementById('nedpCal-'+f);if(cal&&cal.classList.contains('open')){cal.classList.remove('open');const mb=cal.closest('.modal-body');if(mb)mb.style.overflowY='';}}
+function nedpPrev(e,f){e.stopPropagation();const s=nedpState[f];if(s.yearMode)s.view.setFullYear(s.view.getFullYear()-16);else s.view.setMonth(s.view.getMonth()-1);nedpRender(f);}
+function nedpNext(e,f){e.stopPropagation();const s=nedpState[f];if(s.yearMode)s.view.setFullYear(s.view.getFullYear()+16);else s.view.setMonth(s.view.getMonth()+1);nedpRender(f);}
+function nedpToggleYear(e,f){e.stopPropagation();nedpState[f].yearMode=!nedpState[f].yearMode;nedpRender(f);}
+function nedpSelectYear(y,f){nedpState[f].view.setFullYear(y);nedpState[f].yearMode=false;nedpRender(f);}
+function nedpSelectDay(y,m,d,f){const s=nedpState[f];s.date=new Date(y,m,d);const inp=document.getElementById('nedp-'+f);if(inp)inp.value=String(d).padStart(2,'0')+'/'+String(m+1).padStart(2,'0')+'/'+y;nedpClose(f);}
+function nedpRender(f){const s=nedpState[f];const label=document.getElementById('nedpLabel-'+f);const dayView=document.getElementById('nedpDayView-'+f);const yearView=document.getElementById('nedpYearView-'+f);if(!label)return;if(s.yearMode){label.textContent='Select Year';dayView.style.display='none';yearView.style.display='block';const cy=s.view.getFullYear(),start=cy-8;let html='';for(let y=start;y<start+16;y++){const sel=s.date&&y===s.date.getFullYear()?' selected':'';html+=`<div class="dp-year-item${sel}" onclick="nedpSelectYear(${y},'${f}')">${y}</div>`;}document.getElementById('nedpYearGrid-'+f).innerHTML=html;}else{const y=s.view.getFullYear(),m=s.view.getMonth();label.textContent=MONTHS_SHORT[m]+' '+y;dayView.style.display='block';yearView.style.display='none';const first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate(),prevDays=new Date(y,m,0).getDate(),today=new Date();let html='';for(let i=0;i<first;i++)html+=`<div class="dp-day other-month" onclick="nedpSelectDay(${y},${m-1},${prevDays-first+i+1},'${f}')">${prevDays-first+i+1}</div>`;for(let d=1;d<=days;d++){let cls='dp-day';if(s.date&&d===s.date.getDate()&&m===s.date.getMonth()&&y===s.date.getFullYear())cls+=' selected';else if(d===today.getDate()&&m===today.getMonth()&&y===today.getFullYear())cls+=' today';html+=`<div class="${cls}" onclick="nedpSelectDay(${y},${m},${d},'${f}')">${d}</div>`;}const rem=(7-((first+days)%7))%7;for(let i=1;i<=rem;i++)html+=`<div class="dp-day other-month" onclick="nedpSelectDay(${y},${m+1},${i},'${f}')">${i}</div>`;document.getElementById('nedpDays-'+f).innerHTML=html;}}
 
 // ── SYNC CONTENT CARD HEIGHT TO SIDEBAR ──────────────────
 function syncCardHeight(){
