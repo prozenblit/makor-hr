@@ -76,7 +76,6 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .cust-select__trigger.has-value{color:#1a1a1a}
 .cust-select__trigger:hover{border-color:#a8b6cd}
 .cust-select.open .cust-select__trigger{border-color:#005268}
-.cust-select__value{overflow:hidden;text-overflow:ellipsis;min-width:0}
 .cust-select__chevron{flex-shrink:0;color:#005268;transition:transform 0.15s}
 .cust-select.open .cust-select__chevron{transform:rotate(180deg)}
 .cust-select__panel{display:none;position:absolute;top:calc(100% + 6px);left:0;min-width:100%;background:#fff;border-radius:4px;box-shadow:0 8px 32px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);z-index:500;overflow:hidden;padding:6px 0}
@@ -418,7 +417,8 @@ input,select,textarea,button{font-family:inherit;font-size:inherit}
 .modal-divider{height:1px;background:#e5e7ec;margin:4px 0 24px}
 
 /* ── POOL VIEW ── */
-#pool-view{flex:1;display:flex;min-height:0;overflow:hidden}
+#pool-view{flex:1;display:flex;flex-direction:column;min-height:0;overflow:hidden}
+#pool-view .pool-split-inner{display:flex;flex:1;min-height:0;overflow:hidden}
 .pools-list{flex:1;overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,0.12) transparent}
 .pool-group-lbl{padding:8px 20px 6px;font-size:12px;font-weight:700;color:#7c8dac;text-transform:uppercase;letter-spacing:0.06em;background:#f5f5f8;border-bottom:1px solid #e5e7ec}
 .pool-row{padding:14px 20px;border-bottom:1px solid #e5e7ec;cursor:pointer;transition:background 0.1s;position:relative}
@@ -2086,53 +2086,55 @@ body.dark .wfh-stat-icon-office svg{stroke:#60a5fa!important}
 
 <!-- ══════════ POOL VIEW ══════════ -->
 <div id="pool-view" class="page-center" style="display:none">
- <div class="split-left" style="width:50%">
-  <div class="left-header">
-   <div class="left-title-row">
-    <div class="left-title">Pools (<span id="poolCount">0</span>)</div>
-    <button class="btn-primary" onclick="openPoolModal()">
-     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-     New Pool
-    </button>
+ <div class="left-header">
+  <div class="left-title-row">
+   <div class="left-title">Pools (<span id="poolCount">0</span>)</div>
+   <button class="btn-primary" onclick="openPoolModal()">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    New Pool
+   </button>
+  </div>
+  <div class="toolbar">
+   <div class="search-wrap" style="max-width:240px">
+    <span class="search-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></span>
+    <input class="search-input" type="text" placeholder="Search by name…" oninput="filterPools(this.value)">
    </div>
-   <div class="toolbar">
-    <div class="search-wrap" style="max-width:240px">
-     <span class="search-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></span>
-     <input class="search-input" type="text" placeholder="Search by name…" oninput="filterPools(this.value)">
-    </div>
-    <div class="cust-select pool-cs-company" id="pool-cs-company">
-     <div class="cust-select__trigger" onclick="poolCsToggle('pool-cs-company')"><span class="cust-select__value">Company</span><svg class="cust-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9 9 9-9"/></svg></div>
-     <div class="cust-select__panel" id="pool-dd-company"></div>
-    </div>
-    <div class="cust-select pool-cs-team" id="pool-cs-team">
-     <div class="cust-select__trigger" onclick="poolCsToggle('pool-cs-team')"><span class="cust-select__value">Team</span><svg class="cust-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9 9 9-9"/></svg></div>
-     <div class="cust-select__panel" id="pool-dd-team"></div>
-    </div>
-    <div class="cust-select pool-cs-desk" id="pool-cs-desk">
-     <div class="cust-select__trigger" onclick="poolCsToggle('pool-cs-desk')"><span class="cust-select__value">Desk</span><svg class="cust-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9 9 9-9"/></svg></div>
-     <div class="cust-select__panel" id="pool-dd-desk"></div>
-    </div>
-    <div class="toolbar-spacer"></div>
-    <div style="display:flex;align-items:center;gap:8px">
-     <span style="font-size:14px;color:#7c8dac;font-weight:500;white-space:nowrap">Group</span>
-     <div class="cust-select pool-cs-group" id="pool-cs-group">
-      <div class="cust-select__trigger" onclick="poolCsToggle('pool-cs-group')"><span class="cust-select__value">None</span><svg class="cust-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9 9 9-9"/></svg></div>
-      <div class="cust-select__panel">
-       <div class="cust-select__option selected" onclick="csPick('pool-cs-group','name','None',poolSetGrp)">None</div>
-       <div class="cust-select__option" onclick="csPick('pool-cs-group','company','Company',poolSetGrp)">Company</div>
-       <div class="cust-select__option" onclick="csPick('pool-cs-group','team','Team',poolSetGrp)">Team</div>
-       <div class="cust-select__option" onclick="csPick('pool-cs-group','desk','Desk',poolSetGrp)">Desk</div>
-      </div>
+   <div class="cust-select pool-cs-company" id="pool-cs-company">
+    <div class="cust-select__trigger" onclick="poolCsToggle('pool-cs-company')"><span class="cust-select__value">Company</span><svg class="cust-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9 9 9-9"/></svg></div>
+    <div class="cust-select__panel" id="pool-dd-company"></div>
+   </div>
+   <div class="cust-select pool-cs-team" id="pool-cs-team">
+    <div class="cust-select__trigger" onclick="poolCsToggle('pool-cs-team')"><span class="cust-select__value">Team</span><svg class="cust-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9 9 9-9"/></svg></div>
+    <div class="cust-select__panel" id="pool-dd-team"></div>
+   </div>
+   <div class="cust-select pool-cs-desk" id="pool-cs-desk">
+    <div class="cust-select__trigger" onclick="poolCsToggle('pool-cs-desk')"><span class="cust-select__value">Desk</span><svg class="cust-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9 9 9-9"/></svg></div>
+    <div class="cust-select__panel" id="pool-dd-desk"></div>
+   </div>
+   <div class="toolbar-spacer"></div>
+   <div style="display:flex;align-items:center;gap:8px">
+    <span style="font-size:14px;color:#7c8dac;font-weight:500;white-space:nowrap">Group</span>
+    <div class="cust-select pool-cs-group" id="pool-cs-group">
+     <div class="cust-select__trigger" onclick="poolCsToggle('pool-cs-group')"><span class="cust-select__value">None</span><svg class="cust-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9 9 9-9"/></svg></div>
+     <div class="cust-select__panel">
+      <div class="cust-select__option selected" onclick="csPick('pool-cs-group','name','None',poolSetGrp)">None</div>
+      <div class="cust-select__option" onclick="csPick('pool-cs-group','company','Company',poolSetGrp)">Company</div>
+      <div class="cust-select__option" onclick="csPick('pool-cs-group','team','Team',poolSetGrp)">Team</div>
+      <div class="cust-select__option" onclick="csPick('pool-cs-group','desk','Desk',poolSetGrp)">Desk</div>
      </div>
     </div>
    </div>
   </div>
-  <div class="pools-list" id="poolsList"></div>
  </div>
- <div class="split-right" style="background:#f5f5f8;overflow-y:auto;padding:24px;display:block" id="poolSplitRight">
+ <div class="pool-split-inner">
+  <div class="split-left" style="width:50%">
+   <div class="pools-list" id="poolsList"></div>
+  </div>
+  <div class="split-right" style="background:#f5f5f8;overflow-y:auto;padding:24px;display:block" id="poolSplitRight">
   <div class="pool-empty-state">
    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:#a8b6cd"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
    Select a pool to view details
+  </div>
   </div>
  </div>
 </div>
@@ -4345,6 +4347,7 @@ let poolActiveId=null,poolSearchTerm='',poolFilterCompany='',poolFilterTeam='',p
 function initPool(){
  poolInitialized=true;
  poolRenderList(poolFiltered());
+ ['pool-cs-company','pool-cs-team','pool-cs-desk'].forEach(id=>poolPopulateDynamic(id));
 }
 
 function poolCsToggle(id){
@@ -4364,6 +4367,13 @@ function poolPopulateDynamic(id){
  document.getElementById(cfg.panelId).innerHTML=
   `<div class="cust-select__option${cur===''?' selected':''}" onclick="csPick('${id}','','${cfg.label}',${cfg.fn})">All ${cfg.label}s</div>`
   +vals.map(v=>`<div class="cust-select__option${cur===v?' selected':''}" onclick="csPick('${id}','${v}','${v}',${cfg.fn})">${v}</div>`).join('');
+ const tmp=document.createElement('span');
+ tmp.style.cssText='position:fixed;visibility:hidden;top:-9999px;left:-9999px;font-size:14px;font-family:Geist,sans-serif;white-space:nowrap';
+ document.body.appendChild(tmp);
+ let maxW=0;
+ ['All '+cfg.label+'s',...vals].forEach(lbl=>{tmp.textContent=lbl;maxW=Math.max(maxW,tmp.offsetWidth);});
+ document.body.removeChild(tmp);
+ document.querySelector('#'+id+' .cust-select__trigger').style.width=(maxW+48)+'px';
 }
 function poolFilterCo(v){poolFilterCompany=v;poolRenderList(poolFiltered());}
 function poolFilterTm(v){poolFilterTeam=v;poolRenderList(poolFiltered());}
